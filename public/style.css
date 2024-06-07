@@ -943,6 +943,11 @@ video {
   margin-right: auto;
 }
 
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
@@ -960,6 +965,14 @@ video {
 
 .mb-10 {
   margin-bottom: 2.5rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+.mb-12\.5 {
+  margin-bottom: 3.125rem;
 }
 
 .mb-2 {
@@ -1004,10 +1017,6 @@ video {
 
 .mt-2\.5 {
   margin-top: 0.625rem;
-}
-
-.mt-20 {
-  margin-top: 5rem;
 }
 
 .mt-40 {
@@ -1200,6 +1209,10 @@ video {
   background-color: rgb(20 20 20 / var(--tw-bg-opacity));
 }
 
+.bg-free-trial-background-mobile {
+  background-image: url('assets/images/mobile/free-trial-background.png');
+}
+
 .bg-gradient-to-tr {
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
 }
@@ -1233,6 +1246,10 @@ video {
 
 .to-100\% {
   --tw-gradient-to-position: 100%;
+}
+
+.bg-center {
+  background-position: center;
 }
 
 .bg-top {
@@ -1273,6 +1290,16 @@ video {
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+.px-7 {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
+.px-7\.5 {
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
 }
 
 .py-12 {
@@ -1476,6 +1503,10 @@ video {
     margin-bottom: 3.75rem;
   }
 
+  .lg\:mb-40 {
+    margin-bottom: 10rem;
+  }
+
   .lg\:mt-10 {
     margin-top: 2.5rem;
   }
@@ -1535,6 +1566,10 @@ video {
     justify-content: space-between;
   }
 
+  .lg\:bg-free-trial-background {
+    background-image: url('assets/images/laptop/free-trial-background.png');
+  }
+
   .lg\:bg-header-background {
     background-image: url('assets/images/laptop/banner-background.png');
   }
@@ -1547,6 +1582,11 @@ video {
     padding: 2.5rem;
   }
 
+  .lg\:px-15 {
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
+  }
+
   .lg\:py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -1555,6 +1595,10 @@ video {
   .lg\:py-5 {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
+  }
+
+  .lg\:text-left {
+    text-align: left;
   }
 
   .lg\:text-3xl {
