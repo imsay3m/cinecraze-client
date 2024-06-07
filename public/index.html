@@ -15,13 +15,21 @@
         <!-- navbar start -->
         <nav class="w-80 lg:w-[1280px] mx-auto ">
             <div class="py-5 flex justify-between items-center">
-                <div class="w-80 flex justify-between">
+                <div class="w-80 flex justify-between items-center">
                     <a href="index.html" class="flex justify-start items-center">
                         <img src="assets/images/cine-craze-logo.png" alt="">
                         <span class="text-white font-bold text-2xl ml-1">CineCraze</span>
                     </a>
-                    <img class="block lg:hidden" src="assets/images/mobile/hamburger-btn.png" alt="">
-                    <img class="hidden lg:hidden" src="assets/images/mobile/hamburger-btn.png" alt="">
+                    <ul onclick="toggleNavMenu()" class="block lg:hidden">
+                        <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary"
+                            id="hamburger-icon">
+                            <img src="assets/images/mobile/hamburger-btn.png" alt="">
+                        </li>
+                        <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary hidden"
+                            id="close-icon">
+                            <img src="assets/images/mobile/close-btn.png" alt="">
+                        </li>
+                    </ul>
                 </div>
                 <div>
                     <ul
@@ -65,7 +73,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="hidden lg:hidden w-80 mx-auto mt-10">
+            <!-- mobile bar -->
+            <div class="hidden lg:hidden w-80 mx-auto mt-10" id="myLinks">
                 <ul class="flex flex-col gap-y-3 text-xl">
                     <li class="hover:text-primary text-white"><a href="index.html">Home</a></li>
                     <li class="hover:text-primary"><a href="#">Movies & Shows</a></li>
@@ -432,7 +441,22 @@
         </div>
     </footer>
     <!-- footer end -->
-
+    <script>
+        function toggleNavMenu() {
+            var x = document.getElementById("myLinks");
+            var hamburgerIcon = document.getElementById("hamburger-icon")
+            var closeIcon = document.getElementById("close-icon")
+            if (x.style.display === "block") {
+                x.style.display = "none";
+                closeIcon.classList.add("hidden")
+                hamburgerIcon.classList.remove("hidden")
+            } else {
+                x.style.display = "block";
+                hamburgerIcon.classList.add("hidden")
+                closeIcon.classList.remove("hidden")
+            }
+        }
+    </script>
 </body>
 
 </html>
