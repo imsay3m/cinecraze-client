@@ -26,6 +26,8 @@ module.exports = {
       backgroundImage: {
         'header-background': "url('assets/images/laptop/banner-background.png')",
         'header-background-mobile': "url('assets/images/mobile/banner-background.png')",
+        'free-trial-background': "url('assets/images/laptop/free-trial-background.png')",
+        'free-trial-background-mobile': "url('assets/images/mobile/free-trial-background.png')",
       },
       lineHeight: {
         '14': '3.5rem',
