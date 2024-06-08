@@ -55,6 +55,7 @@ module.exports = {
         '90': '22.5rem',
         '93.75': '375px',
         '103.25': '25.8125rem',
+        '107.5': '26.875rem',
         '155': '38.75rem',
         '180': '45rem',
         '280': '70rem',
@@ -70,6 +71,7 @@ module.exports = {
   },
   plugins: [
     require('daisyui'),
+    require('@tailwindcss/forms'),
   ],
   daisyui: {
     themes: ["dark"],

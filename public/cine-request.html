@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request for Movie and Show</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-sans bg-tertiary">
+    <!-- header start -->
+    <header>
+        <!-- navbar start -->
+        <nav class="w-80 lg:w-[1280px] mx-auto ">
+            <div class="py-5 flex justify-between items-center">
+                <div class="w-80 flex justify-between items-center">
+                    <a href="index.html" class="flex justify-start items-center">
+                        <img src="assets/images/cine-craze-logo.png" alt="">
+                        <span class="text-white font-bold text-2xl ml-1">CineCraze</span>
+                    </a>
+                    <ul onclick="toggleNavMenu()" class="block lg:hidden">
+                        <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary"
+                            id="hamburger-icon">
+                            <img src="assets/images/mobile/hamburger-btn.png" alt="">
+                        </li>
+                        <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary hidden"
+                            id="close-icon">
+                            <img src="assets/images/mobile/close-btn.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul
+                        class="hidden lg:flex gap-x-1 text-lg bg-seconderylite font-normal border-[3px]  border-secondery rounded-xl p-2 text-[#BFBFBF]">
+                        <a href="index.html">
+                            <li class="py-2 px-4 hover:rounded-lg hover:bg-primary hover:text-white">
+                                Home
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="py-2 px-4 hover:rounded-lg hover:bg-primary hover:text-white">
+                                Movies &
+                                Shows
+                            </li>
+                        </a>
+                        <a href="cine-request.html">
+                            <li
+                                class="py-2 px-4 bg-secondery border border-[#262626] rounded-lg text-white hover:bg-primary">
+                                Cine Request
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="py-2 px-4 hover:rounded-lg hover:bg-primary hover:text-white">
+                                Subscriptions
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="hidden lg:block">
+                    <ul class="flex gap-x-3">
+                        <a href="">
+                            <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                <img src="assets/images/search-icon.png" alt="">
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class=" p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                <img src="assets/images/notification-icon.png" alt="">
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <!-- mobile bar -->
+            <div class="hidden lg:hidden w-80 mx-auto mt-10" id="myLinks">
+                <ul class="flex flex-col gap-y-3 text-xl">
+                    <li class="hover:text-primary"><a href="index.html">Home</a></li>
+                    <li class="hover:text-primary"><a href="#">Movies & Shows</a></li>
+                    <li class="text-primary font-medium"><a href="cine-request.html">Cine Request</a></li>
+                    <li class="hover:text-primary"><a href="#">Subscriptions</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- navbar end -->
+    </header>
+    <!-- header end -->
+    <!-- request section start -->
+    <main>
+        <div
+            class="w-80 lg:w-[1280px] mx-auto mt-10 mb-20 lg:mt-25 lg:mb-30 flex flex-col lg:flex-row lg:gap-x-12.5 gap-y-12.5">
+            <div class="lg:w-107.5">
+                <h4 class="font-bold text-white text-[28px] lg:text-[38px] mb-2.5">Welcome to our Cine Request page!
+                </h4>
+                <p class="text-[#999999] font-normal text-sm lg:text-base mb-7.5 lg:mb-10">We're here to help you with
+                    any movies or
+                    shows you may want to see. Just let us know what you need!
+                </p>
+                <img class="block lg:hidden border-[6px] rounded-[4px] border-[#262626]"
+                    src="assets/images/mobile/cine-request.png" alt="">
+                <img class="hidden lg:block border-[6px] rounded-[4px] border-[#262626]"
+                    src="assets/images/laptop/cine-request.png" alt="">
+            </div>
+            <div class="lg:w-[800px] lg:bg-seconderylite p-6 lg:p-10 rounded-[10px] border border-[#262626]">
+                <form method="post">
+                    <div class="grid lg:grid-cols-1 gap-y-5 lg:gap-y-10">
+                        <div class="w-full">
+                            <label for="first-name" class="block text-white text-base font-semibold mb-3">Full
+                                Name</label>
+                            <input type="text" id="full-name"
+                                class="w-full p-4 bg-tertiary border border-[#262626] focus:border-[#262626] focus:outline-none focus:ring-0 focus:shadow-md focus:shadow-red-600 rounded-md"
+                                placeholder="Enter Full Name" autocomplete="name">
+                        </div>
+                        <div class="w-full">
+                            <label for="last-name" class="block text-white text-base font-semibold mb-3">Email</label>
+                            <input type="email" id="email"
+                                class="w-full p-4 bg-tertiary border border-[#262626] focus:border-[#262626] focus:outline-none focus:ring-0 focus:shadow-md focus:shadow-red-600 rounded-md"
+                                placeholder="Enter your Email">
+                        </div>
+                        <div class="w-full">
+                            <label for="message" class="block text-white text-base font-semibold mb-3">
+                                Message
+                            </label>
+                            <textarea name="message" id="message" rows="5"
+                                class="w-full p-4 text-white bg-tertiary border border-[#262626] focus:border-[#262626] focus:outline-none focus:ring-0 focus:shadow-md focus:shadow-red-600 rounded-md">🎬 Movie/Show Request
+📌 Title: [Enter Movie/Show Title]
+🎥 Release Year: [Specify Movie Release Year(s)]
+📝 Language: [Specify Language]
+📎 IMDB Link: [Optional]</textarea>
+                        </div>
+                        <div class="flex flex-col lg:flex-row gap-y-5 lg:justify-between lg:items-center lg:gap-x-20">
+                            <div class="flex gap-x-2 lg:items-center">
+                                <input type="checkbox" class="checkbox bg-tertiary" />
+                                <label for="cursor-pointer label" class="ml-2 text-base font-normal text-[#999999]">I
+                                    agree
+                                    with
+                                    Terms of
+                                    Use and Privacy Policy</label>
+                            </div>
+                            <button
+                                class="px-4 py-3 bg-primary text-center rounded-md hover:bg-tertiary hover:outline hover:outline-primary ">
+                                Send Message
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <!-- request section end -->
+    <!-- faq section start -->
+    <section>
+        <div>
+            <div class="w-80 lg:w-[1280px] lg:flex lg:justify-between lg:items-start mx-auto mb-10 lg:mb-15">
+                <div>
+                    <h4 class="font-bold text-white text-xl lg:text-[28px] mb-2.5">Frequently Asked Questions</h4>
+                    <p class="font-normal text-[#999999] text-sm lg:text-base mb-5 lg:mb-0">Got questions? We've got
+                        answers!
+                        Check
+                        out
+                        our FAQ section to find answers to the most common
+                        questions about
+                        CineCraze.</p>
+                </div>
+                <a href="">
+                    <button
+                        class="px-4 py-3 bg-primary text-center rounded-md hover:bg-tertiary hover:outline hover:outline-primary ">
+                        Ask A Question
+                    </button>
+                </a>
+            </div>
+            <div
+                class="w-80 lg:w-[1280px] mx-auto lg:grid lg:grid-rows-4 lg:grid-flow-col lg:items-center lg:justify-between gap-x-10 mb-20 lg:mb-30">
+                <div class="lg:w-155">
+                    <div class="py-5 px-2.5">
+                        <div class="flex justify-between gap-x-3 lg:gap-x-4 items-center mb-3">
+                            <div class="flex items-center gap-x-3 lg:gap-x-4 text-white text-lg lg:text-xl">
+                                <p class="text-base font-medium p-3 border border-[#262626] bg-secondery rounded-md">01
+                                </p>
+                                <h4>What is CineCraze?</h4>
+                            </div>
+                            <ul>
+                                <li onclick="toggleFAQ('plus-btn-1')" class="hidden w-[24px]" id="plus-btn-1">
+                                    <img src="assets/images/plus-icon.png" alt="">
+                                </li>
+                                <li onclick="toggleFAQ('minus-btn-1')" class="block w-[24px]" id="minus-btn-1">
+                                    <img src="assets/images/minus-icon.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="block" id="ans-1">
+                            <p class="text-[#999999] text-sm lg:text-base">CineCraze is a streaming service that allows
+                                you
+                                to
+                                watch movies and shows
+                                on demand.</p>
+                        </div>
+                    </div>
+                    <hr
+                        class="my-4 border-none pt-[1px] bg-gradient-to-r from-[#e5000000] from-0% via-[#E50000] via-15% to-[#e5000000] to-100%">
+                </div>
+                <div class="lg:w-155">
+                    <div class="py-5 px-2.5">
+                        <div class="flex justify-between gap-x-3 lg:gap-x-4 items-center mb-3">
+                            <div class="flex items-center gap-x-3 lg:gap-x-4 text-white text-lg lg:text-xl">
+                                <p class="text-base font-medium p-3 border border-[#262626] bg-secondery rounded-md">02
+                                </p>
+                                <h4>How much does CineCraze cost?</h4>
+                            </div>
+                            <ul>
+                                <li onclick="toggleFAQ('plus-btn-2')" class="block w-[24px]" id="plus-btn-2">
+                                    <img src="assets/images/plus-icon.png" alt="">
+                                </li>
+                                <li onclick="toggleFAQ('minus-btn-2')" class="hidden w-[24px]" id="minus-btn-2">
+                                    <img src="assets/images/minus-icon.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hidden" id="ans-2">
+                            <p class="text-[#999999] text-sm lg:text-base">CineCraze is a streaming service that allows
+                                you
+                                to
+                                watch movies and shows
+                                on demand.</p>
+                        </div>
+                    </div>
+                    <hr
+                        class="my-4 border-none pt-[1px] bg-gradient-to-r from-[#e5000000] from-0% via-[#E50000] via-15% to-[#e5000000] to-100%">
+                </div>
+                <div class="lg:w-155">
+                    <div class="py-5 px-2.5">
+                        <div class="flex justify-between gap-x-3 lg:gap-x-4 items-center mb-3">
+                            <div class="flex items-center gap-x-3 lg:gap-x-4 text-white text-lg lg:text-xl">
+                                <p class="text-base font-medium p-3 border border-[#262626] bg-secondery rounded-md">03
+                                </p>
+                                <h4>What content is available on CineCraze?</h4>
+                            </div>
+                            <ul>
+                                <li onclick="toggleFAQ('plus-btn-3')" class="block w-[24px]" id="plus-btn-3">
+                                    <img src="assets/images/plus-icon.png" alt="">
+                                </li>
+                                <li onclick="toggleFAQ('minus-btn-3')" class="hidden w-[24px]" id="minus-btn-3">
+                                    <img src="assets/images/minus-icon.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hidden" id="ans-3">
+                            <p class="text-[#999999] text-sm lg:text-base">CineCraze is a streaming service that allows
+                                you
+                                to
+                                watch movies and shows
+                                on demand.</p>
+                        </div>
+                    </div>
+                    <hr
+                        class="my-4 border-none pt-[1px] bg-gradient-to-r from-[#e5000000] from-0% via-[#E50000] via-15% to-[#e5000000] to-100%">
+                </div>
+                <div class="lg:w-155">
+                    <div class="py-5 px-2.5">
+                        <div class="flex justify-between gap-x-3 lg:gap-x-4 items-center mb-3">
+                            <div class="flex items-center gap-x-3 lg:gap-x-4 text-white text-lg lg:text-xl">
+                                <p class="text-base font-medium p-3 border border-[#262626] bg-secondery rounded-md">04
+                                </p>
+                                <h4>How can I watch on Cincraze?</h4>
+                            </div>
+                            <ul>
+                                <li onclick="toggleFAQ('plus-btn-4')" class="block w-[24px]" id="plus-btn-4">
+                                    <img src="assets/images/plus-icon.png" alt="">
+                                </li>
+                                <li onclick="toggleFAQ('minus-btn-4')" class="hidden w-[24px]" id="minus-btn-4">
+                                    <img src="assets/images/minus-icon.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hidden" id="ans-4">
+                            <p class="text-[#999999] text-sm lg:text-base">CineCraze is a streaming service that allows
+                                you
+                                to
+                                watch movies and shows
+                                on demand.</p>
+                        </div>
+                    </div>
+                    <hr
+                        class="lg:hidden my-4 border-none pt-[1px] bg-gradient-to-r from-[#e5000000] from-0% via-[#E50000] via-15% to-[#e5000000] to-100%">
+                </div>
+                <div class="lg:w-155">
+                    <div class="py-5 px-2.5">
+                        <div class="flex justify-between gap-x-3 lg:gap-x-4 items-center mb-3">
+                            <div class="flex items-center gap-x-3 lg:gap-x-4 text-white text-lg lg:text-xl">
+                                <p class="text-base font-medium p-3 border border-[#262626] bg-secondery rounded-md">05
+                                </p>
+                                <h4>How do I sign up for CineCraze?</h4>
+                            </div>
+                            <ul>
+                                <li onclick="toggleFAQ('plus-btn-5')" class="block w-[24px]" id="plus-btn-5">
+                                    <img src="assets/images/plus-icon.png" alt="">
+                                </li>
+                                <li onclick="toggleFAQ('minus-btn-5')" class="hidden w-[24px]" id="minus-btn-5">
+                                    <img src="assets/images/minus-icon.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hidden" id="ans-5">
+                            <p class="text-[#999999] text-sm lg:text-base">CineCraze is a streaming service that allows
+                                you
+                                to
+                                watch movies and shows
+                                on demand.</p>
+                        </div>
+                    </div>
+                    <hr
+                        class="my-4 border-none pt-[1px] bg-gradient-to-r from-[#e5000000] from-0% via-[#E50000] via-15% to-[#e5000000] to-100%">
+                </div>
+                <div class="lg:w-155">
+                    <div class="py-5 px-2.5">
+                        <div class="flex justify-between gap-x-3 lg:gap-x-4 items-center mb-3">
+                            <div class="flex items-center gap-x-3 lg:gap-x-4 text-white text-lg lg:text-xl">
+                                <p class="text-base font-medium p-3 border border-[#262626] bg-secondery rounded-md">06
+                                </p>
+                                <h4>What is the CineCraze free trial?</h4>
+                            </div>
+                            <ul>
+                                <li onclick="toggleFAQ('plus-btn-6')" class="block w-[24px]" id="plus-btn-6">
+                                    <img src="assets/images/plus-icon.png" alt="">
+                                </li>
+                                <li onclick="toggleFAQ('minus-btn-6')" class="hidden w-[24px]" id="minus-btn-6">
+                                    <img src="assets/images/minus-icon.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hidden" id="ans-6">
+                            <p class="text-[#999999] text-sm lg:text-base">CineCraze is a streaming service that allows
+                                you
+                                to
+                                watch movies and shows
+                                on demand.</p>
+                        </div>
+                    </div>
+                    <hr
+                        class="my-4 border-none pt-[1px] bg-gradient-to-r from-[#e5000000] from-0% via-[#E50000] via-15% to-[#e5000000] to-100%">
+                </div>
+                <div class="lg:w-155">
+                    <div class=" py-5 px-2.5">
+                        <div class="flex justify-between gap-x-3 lg:gap-x-4 items-center mb-3">
+                            <div class="flex items-center gap-x-3 lg:gap-x-4 text-white text-lg lg:text-xl">
+                                <p class="text-base font-medium p-3 border border-[#262626] bg-secondery rounded-md">07
+                                </p>
+                                <h4>How do I contact CineCraze customer support?</h4>
+                            </div>
+                            <ul>
+                                <li onclick="toggleFAQ('plus-btn-7')" class="block w-[24px]" id="plus-btn-7">
+                                    <img src="assets/images/plus-icon.png" alt="">
+                                </li>
+                                <li onclick="toggleFAQ('minus-btn-7')" class="hidden w-[24px]" id="minus-btn-7">
+                                    <img src="assets/images/minus-icon.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hidden" id="ans-7">
+                            <p class="text-[#999999] text-sm lg:text-base">CineCraze is a streaming service that allows
+                                you
+                                to
+                                watch movies and shows
+                                on demand.</p>
+                        </div>
+                    </div>
+                    <hr
+                        class="my-4 border-none pt-[1px] bg-gradient-to-r from-[#e5000000] from-0% via-[#E50000] via-15% to-[#e5000000] to-100%">
+                </div>
+                <div class="py-5 px-2.5">
+                    <div class="flex justify-between gap-x-3 lg:gap-x-4 items-center mb-3">
+                        <div class="flex items-center gap-x-3 lg:gap-x-4 text-white text-lg lg:text-xl">
+                            <p class="text-base font-medium p-3 border border-[#262626] bg-secondery rounded-md">08
+                            </p>
+                            <h4>What are the CineCraze payment methods?</h4>
+                        </div>
+                        <ul>
+                            <li onclick="toggleFAQ('plus-btn-8')" class="block w-[24px]" id="plus-btn-8">
+                                <img src="assets/images/plus-icon.png" alt="">
+                            </li>
+                            <li onclick="toggleFAQ('minus-btn-8')" class="hidden w-[24px]" id="minus-btn-8">
+                                <img src="assets/images/minus-icon.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="hidden" id="ans-8">
+                        <p class="text-[#999999] text-sm lg:text-base">CineCraze is a streaming service that allows you
+                            to
+                            watch movies and shows
+                            on demand.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- faq section end -->
+    <!-- footer start  -->
+    <footer class=" bg-seconderylite">
+        <div class="w-80 lg:w-[1280px] mx-auto grid grid-cols-2 lg:grid-cols-6 lg:py-20 gap-y-7.5 py-12.5 ">
+            <ul class="text-[#999999] text-sm font-medium flex flex-col justify-start gap-y-2 ">
+                <li class="text-white text-base mb-4 ">
+                    <a class="hover:text-primary" href="index.html">Home</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Categories</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Devices</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Pricing</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">FAQ</a>
+                </li>
+            </ul>
+            <ul class="text-[#999999] text-sm font-medium flex flex-col justify-start gap-y-2">
+                <li class="text-white text-base mb-4">
+                    <a class="hover:text-primary" href="#">Movies</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Genres</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Trending</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">New Release</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Popular</a>
+                </li>
+            </ul>
+            <ul class="text-[#999999] text-sm font-medium flex flex-col justify-start gap-y-2">
+                <li class="text-white text-base mb-4">
+                    <a class="hover:text-primary" href="#">Shows</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Genres</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Trending</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">New Release</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Popular</a>
+                </li>
+            </ul>
+            <ul class="text-[#999999] text-sm font-medium flex flex-col justify-start gap-y-2">
+                <li class="text-white text-base mb-4">
+                    <a class="hover:text-primary" href="#">Support</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Contact US</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="cine-request.html">Cine Request</a>
+                </li>
+            </ul>
+            <ul class="text-[#999999] text-sm font-medium flex flex-col justify-start gap-y-2">
+                <li class="text-white text-base mb-4">
+                    <a class="hover:text-primary" href="#">Subscriptions</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Plans</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Features</a>
+                </li>
+            </ul>
+            <ul class="text-[#999999] text-sm font-medium flex flex-col justify-start gap-y-2">
+                <li class="text-white text-base mb-4">
+                    Connect With Us
+                </li>
+                <div class="flex gap-x-2.5">
+                    <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                        <a href="">
+                            <img src="assets/images/fb-icon.png" alt="">
+                        </a>
+                    </li>
+                    <li class=" p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                        <a href="">
+                            <img src="assets/images/x-icon.png" alt="">
+                        </a>
+                    </li>
+                    <li class=" p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                        <a href="">
+                            <img src="assets/images/linkedin-icon.png" alt="">
+                        </a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+        <div
+            class="w-80 lg:w-[1280px] mx-auto text-[#999999] text-sm font-medium border-t border-[#262626] lg:flex lg:justify-between lg:items-center">
+            <p class="my-5">
+                @2024 CineCraze, All Rights Reserved
+            </p>
+            <ul class="flex pb-5 lg:py-5">
+                <li class="border-r border-[#262626] pr-3">
+                    <a href="">
+                        Terms of Use
+                    </a>
+                </li>
+                <li class="border-r border-[#262626] px-3">
+                    <a href="">
+                        Privacy Policy
+                    </a>
+                </li>
+                <li class="pl-3">
+                    <a href="">
+                        Cookie Policy
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+    <script>
+        function toggleNavMenu() {
+            var x = document.getElementById("myLinks");
+            var hamburgerIcon = document.getElementById("hamburger-icon")
+            var closeIcon = document.getElementById("close-icon")
+            if (x.style.display === "block") {
+                x.style.display = "none";
+                closeIcon.classList.add("hidden")
+                hamburgerIcon.classList.remove("hidden")
+            } else {
+                x.style.display = "block";
+                hamburgerIcon.classList.add("hidden")
+                closeIcon.classList.remove("hidden")
+            }
+        }
+    </script>
+</body>
+
+</html>
