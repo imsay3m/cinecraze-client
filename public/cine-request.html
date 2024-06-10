@@ -39,7 +39,7 @@
                                 Home
                             </li>
                         </a>
-                        <a href="#">
+                        <a href="movies-and-shows.html">
                             <li class="py-2 px-4 hover:rounded-lg hover:bg-primary hover:text-white">
                                 Movies &
                                 Shows
@@ -77,7 +77,7 @@
             <div class="hidden lg:hidden w-80 mx-auto mt-10" id="myLinks">
                 <ul class="flex flex-col gap-y-3 text-xl">
                     <li class="hover:text-primary"><a href="index.html">Home</a></li>
-                    <li class="hover:text-primary"><a href="#">Movies & Shows</a></li>
+                    <li class="hover:text-primary"><a href="movies-and-shows.html">Movies & Shows</a></li>
                     <li class="text-primary font-medium"><a href="cine-request.html">Cine Request</a></li>
                     <li class="hover:text-primary"><a href="#">Subscriptions</a></li>
                 </ul>
@@ -395,6 +395,26 @@
         </div>
     </section>
     <!-- faq section end -->
+    <!-- free trial section start -->
+    <section>
+        <div
+            class="w-80 lg:w-[1280px] text-center lg:text-left lg:flex lg:justify-between lg:items-center bg-free-trial-background-mobile lg:bg-free-trial-background bg-center bg-no-repeat lg:bg-cover mx-auto px-7.5 py-12.5 lg:px-15 lg:py-20 rounded-xl border border-[#262626] mb-20 lg:mb-40">
+            <div class="mb-12.5 lg:mb-0">
+                <h4 class="font-bold text-2xl lg:text-[28px] mb-2.5">Start your free trial today!</h4>
+                <p class="font-normal text-sm lg:text-base text-[#999999]">This is a clear and concise call to
+                    action
+                    that encourages users to sign up for a free trial of
+                    CineCraze.</p>
+            </div>
+            <a href="">
+                <button
+                    class="px-4 py-3 bg-primary text-center rounded-md hover:bg-tertiary hover:outline hover:outline-primary ">
+                    Start Free Trial
+                </button>
+            </a>
+        </div>
+    </section>
+    <!-- free trial section end -->
     <!-- footer start  -->
     <footer class=" bg-seconderylite">
         <div class="w-80 lg:w-[1280px] mx-auto grid grid-cols-2 lg:grid-cols-6 lg:py-20 gap-y-7.5 py-12.5 ">
@@ -520,22 +540,7 @@
     </footer>
     <!-- footer end -->
 
-    <script>
-        function toggleNavMenu() {
-            var x = document.getElementById("myLinks");
-            var hamburgerIcon = document.getElementById("hamburger-icon")
-            var closeIcon = document.getElementById("close-icon")
-            if (x.style.display === "block") {
-                x.style.display = "none";
-                closeIcon.classList.add("hidden")
-                hamburgerIcon.classList.remove("hidden")
-            } else {
-                x.style.display = "block";
-                hamburgerIcon.classList.add("hidden")
-                closeIcon.classList.remove("hidden")
-            }
-        }
-    </script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

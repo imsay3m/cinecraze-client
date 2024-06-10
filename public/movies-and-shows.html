@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies And Series</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-sans bg-tertiary">
+    <!-- header start -->
+    <header>
+        <!-- navbar start -->
+        <nav class="w-80 lg:w-[1280px] mx-auto ">
+            <div class="py-5 flex justify-between items-center">
+                <div class="w-80 flex justify-between items-center">
+                    <a href="index.html" class="flex justify-start items-center">
+                        <img src="assets/images/cine-craze-logo.png" alt="">
+                        <span class="text-white font-bold text-2xl ml-1">CineCraze</span>
+                    </a>
+                    <ul onclick="toggleNavMenu()" class="block lg:hidden">
+                        <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary"
+                            id="hamburger-icon">
+                            <img src="assets/images/mobile/hamburger-btn.png" alt="">
+                        </li>
+                        <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary hidden"
+                            id="close-icon">
+                            <img src="assets/images/mobile/close-btn.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul
+                        class="hidden lg:flex gap-x-1 text-lg bg-seconderylite font-normal border-[3px]  border-secondery rounded-xl p-2 text-[#BFBFBF]">
+                        <a href="index.html">
+                            <li class="py-2 px-4 hover:rounded-lg hover:bg-primary hover:text-white">
+                                Home
+                            </li>
+                        </a>
+                        <a href="movies-and-shows.html">
+                            <li
+                                class="py-2 px-4 bg-secondery border border-[#262626] rounded-lg  hover:bg-primary hover:text-white">
+                                Movies &
+                                Shows
+                            </li>
+                        </a>
+                        <a href="cine-request.html">
+                            <li class="py-2 px-4 hover:rounded-lg  hover:text-white hover:bg-primary">
+                                Cine Request
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="py-2 px-4 hover:rounded-lg hover:bg-primary hover:text-white">
+                                Subscriptions
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="hidden lg:block">
+                    <ul class="flex gap-x-3">
+                        <a href="">
+                            <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                <img src="assets/images/search-icon.png" alt="">
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class=" p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                <img src="assets/images/notification-icon.png" alt="">
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <!-- mobile bar -->
+            <div class="hidden lg:hidden w-80 mx-auto mt-10" id="myLinks">
+                <ul class="flex flex-col gap-y-3 text-xl">
+                    <li class="hover:text-primary"><a href="index.html">Home</a></li>
+                    <li class="text-primary font-medium"><a href="movies-and-shows.html">Movies & Shows</a></li>
+                    <li class="hover:text-primary"><a href="cine-request.html">Cine Request</a></li>
+                    <li class="hover:text-primary"><a href="#">Subscriptions</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- navbar end -->
+    </header>
+    <!-- header end -->
+    <!-- Swiper start-->
+    <div class="w-80 lg:w-[1280px] mx-auto mb-25">
+        <div class="swiper mySwiper my-10">
+            <div class="swiper-wrapper ">
+                <div class="swiper-slide bg-tertiary">
+                    <img src="https://image.tmdb.org/t/p/original/kmCBLNHsNnlDEtghSaF2nabpG2T.jpg" />
+                </div>
+                <div class="swiper-slide bg-tertiary">
+                    <img src="https://image.tmdb.org/t/p/original/ig9sV9aYh7fraMjVNc5MYp4S7RT.jpg" />
+                </div>
+                <div class="swiper-slide bg-tertiary">
+                    <img src="https://image.tmdb.org/t/p/original/kmCBLNHsNnlDEtghSaF2nabpG2T.jpg" />
+                </div>
+                <div class="swiper-slide bg-tertiary">
+                    <img src="https://image.tmdb.org/t/p/original/ig9sV9aYh7fraMjVNc5MYp4S7RT.jpg" />
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <!-- Swiper end-->
+    <!-- movies section start -->
+    <div>
+        <div class="w-80 lg:w-[1280px] mx-auto mb-15 mt-25">
+            <ul
+                class="flex lg:hidden gap-x-2 justify-center text-lg bg-seconderylite font-normal border-[3px]  border-secondery rounded-xl p-2 text-[#BFBFBF]">
+                <a href="#">
+                    <li
+                        class="py-3 px-12.5 bg-secondery border border-[#262626] rounded-lg  hover:bg-primary text-white font-medium text-sm">
+                        Movies
+                    </li>
+                </a>
+                <a href="#">
+                    <li class="py-3 px-12.5 hover:rounded-lg hover:bg-primary hover:text-white font-medium text-sm">
+                        Shows
+                    </li>
+                </a>
+            </ul>
+        </div>
+        <div class="w-80 lg:w-[1280px] my-8 lg:my-20 mx-auto p-0 lg:p-10 lg:border lg:rounded-xl lg:border-[#262626] ">
+            <button
+                class="hidden lg:block px-6 py-4 mt-[-68px] font-semibold text-lg bg-primary text-center rounded-md">
+                Movies
+            </button>
+            <!-- new release section start -->
+            <div class="my-8 lg:mb-14">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-semibold text-xl lg:text-3xl">New Releases</h3>
+                    <a href="">
+                        <button
+                            class="px-4 py-2 bg-primary font-medium text-center rounded-md hover:bg-tertiary hover:outline hover:outline-primary ">
+                            See All
+                        </button>
+                    </a>
+                </div>
+                <div class="my-5 grid grid-cols-2 lg:grid-cols-5 items-center gap-5 mx-auto">
+                    <div class="p-3 lg:p-4 flex flex-col gap-y-2 lg:gap-y-4 rounded-[10px] bg-secondery mx-auto">
+                        <img class="w-[128px] lg:w-[200px] rounded-[10px]"
+                            src="assets/images/mobile/morbius-original-poster.jpg" alt="">
+                        <div class="flex flex-col gap-y-1">
+                            <h5 class="font-medium text-base">Morbious</h5>
+                            <div class="flex gap-x-2 justify-start items-center text-[#999999] text-sm font-light">
+                                <div class="flex gap-x-2 justify-start items-center ">
+                                    <img src="assets/images/year-icon.png" alt="">
+                                    <p>2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 lg:p-4 flex flex-col gap-y-2 lg:gap-y-4 rounded-[10px] bg-secondery mx-auto">
+                        <img class="w-[128px] lg:w-[200px] rounded-[10px]"
+                            src="assets/images/mobile/morbius-original-poster.jpg" alt="">
+                        <div class="flex flex-col gap-y-1">
+                            <h5 class="font-medium text-base">Morbious</h5>
+                            <div class="flex gap-x-2 justify-start items-center text-[#999999] text-sm font-light">
+                                <div class="flex gap-x-2 justify-start items-center ">
+                                    <img src="assets/images/year-icon.png" alt="">
+                                    <p>2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 lg:p-4 flex flex-col gap-y-2 lg:gap-y-4 rounded-[10px] bg-secondery mx-auto">
+                        <img class="w-[128px] lg:w-[200px] rounded-[10px]"
+                            src="assets/images/mobile/morbius-original-poster.jpg" alt="">
+                        <div class="flex flex-col gap-y-1">
+                            <h5 class="font-medium text-base">Morbious</h5>
+                            <div class="flex gap-x-2 justify-start items-center text-[#999999] text-sm font-light">
+                                <div class="flex gap-x-2 justify-start items-center ">
+                                    <img src="assets/images/year-icon.png" alt="">
+                                    <p>2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 lg:p-4 flex flex-col gap-y-2 lg:gap-y-4 rounded-[10px] bg-secondery mx-auto">
+                        <img class="w-[128px] lg:w-[200px] rounded-[10px]"
+                            src="assets/images/mobile/morbius-original-poster.jpg" alt="">
+                        <div class="flex flex-col gap-y-1">
+                            <h5 class="font-medium text-base">Morbious</h5>
+                            <div class="flex gap-x-2 justify-start items-center text-[#999999] text-sm font-light">
+                                <div class="flex gap-x-2 justify-start items-center ">
+                                    <img src="assets/images/year-icon.png" alt="">
+                                    <p>2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 lg:p-4 flex flex-col gap-y-2 lg:gap-y-4 rounded-[10px] bg-secondery mx-auto">
+                        <img class="w-[128px] lg:w-[192px] rounded-[10px]"
+                            src="assets/images/mobile/morbius-original-poster.jpg" alt="">
+                        <div class="flex flex-col gap-y-1">
+                            <h5 class="font-medium text-base">Morbious</h5>
+                            <div class="flex gap-x-2 justify-start items-center text-[#999999] text-sm font-light">
+                                <div class="flex gap-x-2 justify-start items-center ">
+                                    <img src="assets/images/year-icon.png" alt="">
+                                    <p>2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- new release section end -->
+            <!-- upcoming movie section start -->
+            <div class="mb-8 lg:mb-14">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-semibold text-xl lg:text-3xl">Upcoming Movies</h3>
+                    <a href="">
+                        <button
+                            class="px-4 py-2 bg-primary font-medium text-center rounded-md hover:bg-tertiary hover:outline hover:outline-primary ">
+                            See All
+                        </button>
+                    </a>
+                </div>
+                <div class="my-5 grid grid-cols-2 lg:grid-cols-5 items-center gap-5 mx-auto">
+                    <div class="p-3 lg:p-4 flex flex-col gap-y-2 lg:gap-y-4 rounded-[10px] bg-secondery mx-auto">
+                        <img class="w-[128px] lg:w-[200px] rounded-[10px]"
+                            src="assets/images/mobile/morbius-original-poster.jpg" alt="">
+                        <div class="flex flex-col gap-y-1">
+                            <h5 class="font-medium text-base">Morbious</h5>
+                            <div class="flex gap-x-2 justify-start items-center text-[#999999] text-sm font-light">
+                                <div class="flex gap-x-2 justify-start items-center ">
+                                    <img src="assets/images/year-icon.png" alt="">
+                                    <p>2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 lg:p-4 flex flex-col gap-y-2 lg:gap-y-4 rounded-[10px] bg-secondery mx-auto">
+                        <img class="w-[128px] lg:w-[200px] rounded-[10px]"
+                            src="assets/images/mobile/morbius-original-poster.jpg" alt="">
+                        <div class="flex flex-col gap-y-1">
+                            <h5 class="font-medium text-base">Morbious</h5>
+                            <div class="flex gap-x-2 justify-start items-center text-[#999999] text-sm font-light">
+                                <div class="flex gap-x-2 justify-start items-center ">
+                                    <img src="assets/images/year-icon.png" alt="">
+                                    <p>2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 lg:p-4 flex flex-col gap-y-2 lg:gap-y-4 rounded-[10px] bg-secondery mx-auto">
+                        <img class="w-[128px] lg:w-[200px] rounded-[10px]"
+                            src="assets/images/mobile/morbius-original-poster.jpg" alt="">
+                        <div class="flex flex-col gap-y-1">
+                            <h5 class="font-medium text-base">Morbious</h5>
+                            <div class="flex gap-x-2 justify-start items-center text-[#999999] text-sm font-light">
+                                <div class="flex gap-x-2 justify-start items-center ">
+                                    <img src="assets/images/year-icon.png" alt="">
+                                    <p>2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 lg:p-4 flex flex-col gap-y-2 lg:gap-y-4 rounded-[10px] bg-secondery mx-auto">
+                        <img class="w-[128px] lg:w-[200px] rounded-[10px]"
+                            src="assets/images/mobile/morbius-original-poster.jpg" alt="">
+                        <div class="flex flex-col gap-y-1">
+                            <h5 class="font-medium text-base">Morbious</h5>
+                            <div class="flex gap-x-2 justify-start items-center text-[#999999] text-sm font-light">
+                                <div class="flex gap-x-2 justify-start items-center ">
+                                    <img src="assets/images/year-icon.png" alt="">
+                                    <p>2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 lg:p-4 flex flex-col gap-y-2 lg:gap-y-4 rounded-[10px] bg-secondery mx-auto">
+                        <img class="w-[128px] lg:w-[200px] rounded-[10px]"
+                            src="assets/images/mobile/morbius-original-poster.jpg" alt="">
+                        <div class="flex flex-col gap-y-1">
+                            <h5 class="font-medium text-base">Morbious</h5>
+                            <div class="flex gap-x-2 justify-start items-center text-[#999999] text-sm font-light">
+                                <div class="flex gap-x-2 justify-start items-center ">
+                                    <img src="assets/images/year-icon.png" alt="">
+                                    <p>2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- upcoming movie section end -->
+            <!-- movie section start -->
+            <div class="mb-8 lg:mb-14">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-semibold text-xl lg:text-3xl">Newly Added Movies</h3>
+                    <a href="">
+                        <button
+                            class="px-4 py-2 bg-primary font-medium text-center rounded-md hover:bg-tertiary hover:outline hover:outline-primary ">
+                            See All
+                        </button>
+                    </a>
+                </div>
+                <div class="my-5 grid grid-cols-2 lg:grid-cols-5 items-center gap-5 mx-auto">
+                    <div class="p-3 lg:p-4 flex flex-col gap-y-2 lg:gap-y-4 rounded-[10px] bg-secondery mx-auto">
+                        <img class="w-[128px] lg:w-[200px] rounded-[10px]"
+                            src="assets/images/mobile/morbius-original-poster.jpg" alt="">
+                        <div class="flex flex-col gap-y-1">
+                            <h5 class="font-medium text-base">Morbious</h5>
+                            <div class="flex gap-x-2 justify-start items-center text-[#999999] text-sm font-light">
+                                <div class="flex gap-x-2 justify-start items-center ">
+                                    <img src="assets/images/year-icon.png" alt="">
+                                    <p>2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 lg:p-4 flex flex-col gap-y-2 lg:gap-y-4 rounded-[10px] bg-secondery mx-auto">
+                        <img class="w-[128px] lg:w-[200px] rounded-[10px]"
+                            src="assets/images/mobile/morbius-original-poster.jpg" alt="">
+                        <div class="flex flex-col gap-y-1">
+                            <h5 class="font-medium text-base">Morbious</h5>
+                            <div class="flex gap-x-2 justify-start items-center text-[#999999] text-sm font-light">
+                                <div class="flex gap-x-2 justify-start items-center ">
+                                    <img src="assets/images/year-icon.png" alt="">
+                                    <p>2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 lg:p-4 flex flex-col gap-y-2 lg:gap-y-4 rounded-[10px] bg-secondery mx-auto">
+                        <img class="w-[128px] lg:w-[200px] rounded-[10px]"
+                            src="assets/images/mobile/morbius-original-poster.jpg" alt="">
+                        <div class="flex flex-col gap-y-1">
+                            <h5 class="font-medium text-base">Morbious</h5>
+                            <div class="flex gap-x-2 justify-start items-center text-[#999999] text-sm font-light">
+                                <div class="flex gap-x-2 justify-start items-center ">
+                                    <img src="assets/images/year-icon.png" alt="">
+                                    <p>2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 lg:p-4 flex flex-col gap-y-2 lg:gap-y-4 rounded-[10px] bg-secondery mx-auto">
+                        <img class="w-[128px] lg:w-[200px] rounded-[10px]"
+                            src="assets/images/mobile/morbius-original-poster.jpg" alt="">
+                        <div class="flex flex-col gap-y-1">
+                            <h5 class="font-medium text-base">Morbious</h5>
+                            <div class="flex gap-x-2 justify-start items-center text-[#999999] text-sm font-light">
+                                <div class="flex gap-x-2 justify-start items-center ">
+                                    <img src="assets/images/year-icon.png" alt="">
+                                    <p>2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 lg:p-4 flex flex-col gap-y-2 lg:gap-y-4 rounded-[10px] bg-secondery mx-auto">
+                        <img class="w-[128px] lg:w-[200px] rounded-[10px]"
+                            src="assets/images/mobile/morbius-original-poster.jpg" alt="">
+                        <div class="flex flex-col gap-y-1">
+                            <h5 class="font-medium text-base">Morbious</h5>
+                            <div class="flex gap-x-2 justify-start items-center text-[#999999] text-sm font-light">
+                                <div class="flex gap-x-2 justify-start items-center ">
+                                    <img src="assets/images/year-icon.png" alt="">
+                                    <p>2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 lg:p-4 flex flex-col gap-y-2 lg:gap-y-4 rounded-[10px] bg-secondery mx-auto">
+                        <img class="w-[128px] lg:w-[200px] rounded-[10px]"
+                            src="assets/images/mobile/morbius-original-poster.jpg" alt="">
+                        <div class="flex flex-col gap-y-1">
+                            <h5 class="font-medium text-base">Morbious</h5>
+                            <div class="flex gap-x-2 justify-start items-center text-[#999999] text-sm font-light">
+                                <div class="flex gap-x-2 justify-start items-center ">
+                                    <img src="assets/images/year-icon.png" alt="">
+                                    <p>2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 lg:p-4 flex flex-col gap-y-2 lg:gap-y-4 rounded-[10px] bg-secondery mx-auto">
+                        <img class="w-[128px] lg:w-[192px] rounded-[10px]"
+                            src="assets/images/mobile/morbius-original-poster.jpg" alt="">
+                        <div class="flex flex-col gap-y-1">
+                            <h5 class="font-medium text-base">Morbious</h5>
+                            <div class="flex gap-x-2 justify-start items-center text-[#999999] text-sm font-light">
+                                <div class="flex gap-x-2 justify-start items-center ">
+                                    <img src="assets/images/year-icon.png" alt="">
+                                    <p>2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- movie section end -->
+        </div>
+
+    </div>
+    <!-- movies section end -->
+    <!-- free trial section start -->
+    <section>
+        <div
+            class="w-80 lg:w-[1280px] text-center lg:text-left lg:flex lg:justify-between lg:items-center bg-free-trial-background-mobile lg:bg-free-trial-background bg-center bg-no-repeat lg:bg-cover mx-auto px-7.5 py-12.5 lg:px-15 lg:py-20 rounded-xl border border-[#262626] mb-20 lg:mb-40">
+            <div class="mb-12.5 lg:mb-0">
+                <h4 class="font-bold text-2xl lg:text-[28px] mb-2.5">Start your free trial today!</h4>
+                <p class="font-normal text-sm lg:text-base text-[#999999]">This is a clear and concise call to
+                    action
+                    that encourages users to sign up for a free trial of
+                    CineCraze.</p>
+            </div>
+            <a href="">
+                <button
+                    class="px-4 py-3 bg-primary text-center rounded-md hover:bg-tertiary hover:outline hover:outline-primary ">
+                    Start Free Trial
+                </button>
+            </a>
+        </div>
+    </section>
+    <!-- free trial section end -->
+    <!-- footer start  -->
+    <footer class=" bg-seconderylite">
+        <div class="w-80 lg:w-[1280px] mx-auto grid grid-cols-2 lg:grid-cols-6 lg:py-20 gap-y-7.5 py-12.5 ">
+            <ul class="text-[#999999] text-sm font-medium flex flex-col justify-start gap-y-2 ">
+                <li class="text-white text-base mb-4 ">
+                    <a class="hover:text-primary" href="index.html">Home</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Categories</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Devices</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Pricing</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">FAQ</a>
+                </li>
+            </ul>
+            <ul class="text-[#999999] text-sm font-medium flex flex-col justify-start gap-y-2">
+                <li class="text-white text-base mb-4">
+                    <a class="hover:text-primary" href="movies-and-shows.html">Movies</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Genres</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Trending</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">New Release</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Popular</a>
+                </li>
+            </ul>
+            <ul class="text-[#999999] text-sm font-medium flex flex-col justify-start gap-y-2">
+                <li class="text-white text-base mb-4">
+                    <a class="hover:text-primary" href="movies-and-shows.html">Shows</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Genres</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Trending</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">New Release</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Popular</a>
+                </li>
+            </ul>
+            <ul class="text-[#999999] text-sm font-medium flex flex-col justify-start gap-y-2">
+                <li class="text-white text-base mb-4">
+                    <a class="hover:text-primary" href="#">Support</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Contact US</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="cine-request.html">Cine Request</a>
+                </li>
+            </ul>
+            <ul class="text-[#999999] text-sm font-medium flex flex-col justify-start gap-y-2">
+                <li class="text-white text-base mb-4">
+                    <a class="hover:text-primary" href="#">Subscriptions</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Plans</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Features</a>
+                </li>
+            </ul>
+            <ul class="text-[#999999] text-sm font-medium flex flex-col justify-start gap-y-2">
+                <li class="text-white text-base mb-4">
+                    Connect With Us
+                </li>
+                <div class="flex gap-x-2.5">
+                    <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                        <a href="">
+                            <img src="assets/images/fb-icon.png" alt="">
+                        </a>
+                    </li>
+                    <li class=" p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                        <a href="">
+                            <img src="assets/images/x-icon.png" alt="">
+                        </a>
+                    </li>
+                    <li class=" p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                        <a href="">
+                            <img src="assets/images/linkedin-icon.png" alt="">
+                        </a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+        <div
+            class="w-80 lg:w-[1280px] mx-auto text-[#999999] text-sm font-medium border-t border-[#262626] lg:flex lg:justify-between lg:items-center">
+            <p class="my-5">
+                @2024 CineCraze, All Rights Reserved
+            </p>
+            <ul class="flex pb-5 lg:py-5">
+                <li class="border-r border-[#262626] pr-3">
+                    <a href="">
+                        Terms of Use
+                    </a>
+                </li>
+                <li class="border-r border-[#262626] px-3">
+                    <a href="">
+                        Privacy Policy
+                    </a>
+                </li>
+                <li class="pl-3">
+                    <a href="">
+                        Cookie Policy
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- footer end -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

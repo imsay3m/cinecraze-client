@@ -1411,6 +1411,11 @@ select {
   margin-right: auto;
 }
 
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
 .my-20 {
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -1436,6 +1441,11 @@ select {
   margin-bottom: 1.875rem;
 }
 
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -1448,6 +1458,10 @@ select {
   margin-bottom: 3.125rem;
 }
 
+.mb-15 {
+  margin-bottom: 3.75rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -1458,6 +1472,10 @@ select {
 
 .mb-20 {
   margin-bottom: 5rem;
+}
+
+.mb-25 {
+  margin-bottom: 6.25rem;
 }
 
 .mb-3 {
@@ -1478,6 +1496,10 @@ select {
 
 .mb-7\.5 {
   margin-bottom: 1.875rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
 }
 
 .ml-1 {
@@ -1508,6 +1530,10 @@ select {
   margin-top: 0.625rem;
 }
 
+.mt-25 {
+  margin-top: 6.25rem;
+}
+
 .mt-7 {
   margin-top: 1.75rem;
 }
@@ -1516,8 +1542,16 @@ select {
   margin-top: 1.875rem;
 }
 
+.mt-\[-68px\] {
+  margin-top: -68px;
+}
+
 .mt-\[298px\] {
   margin-top: 298px;
+}
+
+.mt-\[360px\] {
+  margin-top: 360px;
 }
 
 .line-clamp-2 {
@@ -1550,8 +1584,36 @@ select {
   display: none;
 }
 
+.h-auto {
+  height: auto;
+}
+
+.w-12 {
+  width: 3rem;
+}
+
+.w-12\.5 {
+  width: 3.125rem;
+}
+
+.w-3\/4 {
+  width: 75%;
+}
+
+.w-4\/5 {
+  width: 80%;
+}
+
+.w-64 {
+  width: 16rem;
+}
+
 .w-80 {
   width: 20rem;
+}
+
+.w-\[128px\] {
+  width: 128px;
 }
 
 .w-\[24px\] {
@@ -1583,6 +1645,10 @@ select {
   flex-direction: column;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .items-start {
   align-items: flex-start;
 }
@@ -1595,8 +1661,24 @@ select {
   justify-content: flex-start;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-2\.5 {
+  gap: 0.625rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
 }
 
 .gap-x-1 {
@@ -1624,6 +1706,10 @@ select {
        column-gap: 0.75rem;
 }
 
+.gap-y-1 {
+  row-gap: 0.25rem;
+}
+
 .gap-y-12 {
   row-gap: 3rem;
 }
@@ -1638,6 +1724,10 @@ select {
 
 .gap-y-3 {
   row-gap: 0.75rem;
+}
+
+.gap-y-4 {
+  row-gap: 1rem;
 }
 
 .gap-y-5 {
@@ -1743,12 +1833,20 @@ select {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
+.bg-gradient-to-t {
+  background-image: linear-gradient(to top, var(--tw-gradient-stops));
+}
+
 .bg-gradient-to-tr {
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
 }
 
 .bg-header-background-mobile {
   background-image: url('assets/images/mobile/banner-background.png');
+}
+
+.bg-movie-poster-background {
+  background-image: url('assets/images/mobile/eternals-original-poster.png');
 }
 
 .from-\[\#0F0F0F\] {
@@ -1760,6 +1858,12 @@ select {
 .from-\[\#e5000000\] {
   --tw-gradient-from: #e5000000 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(229 0 0 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-tertiary {
+  --tw-gradient-from: #141414 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(20 20 20 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -1793,6 +1897,10 @@ select {
   --tw-gradient-to: #e5000015 var(--tw-gradient-to-position);
 }
 
+.to-transparent {
+  --tw-gradient-to: transparent var(--tw-gradient-to-position);
+}
+
 .to-100\% {
   --tw-gradient-to-position: 100%;
 }
@@ -1809,6 +1917,10 @@ select {
   background-repeat: no-repeat;
 }
 
+.p-0 {
+  padding: 0px;
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -1823,6 +1935,16 @@ select {
 
 .p-6 {
   padding: 1.5rem;
+}
+
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.px-12\.5 {
+  padding-left: 3.125rem;
+  padding-right: 3.125rem;
 }
 
 .px-2 {
@@ -1880,6 +2002,11 @@ select {
   padding-bottom: 0.5rem;
 }
 
+.py-2\.5 {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -1888,6 +2015,11 @@ select {
 .py-3\.5 {
   padding-top: 0.875rem;
   padding-bottom: 0.875rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .py-5 {
@@ -1913,6 +2045,10 @@ select {
 
 .pt-\[1px\] {
   padding-top: 1px;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .text-center {
@@ -1963,6 +2099,10 @@ select {
 
 .font-bold {
   font-weight: 700;
+}
+
+.font-light {
+  font-weight: 300;
 }
 
 .font-medium {
@@ -2093,6 +2233,16 @@ select {
 }
 
 @media (min-width: 1024px) {
+  .lg\:my-20 {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  .lg\:my-25 {
+    margin-top: 6.25rem;
+    margin-bottom: 6.25rem;
+  }
+
   .lg\:my-30 {
     margin-top: 7.5rem;
     margin-bottom: 7.5rem;
@@ -2106,8 +2256,24 @@ select {
     margin-bottom: 2.5rem;
   }
 
+  .lg\:mb-14 {
+    margin-bottom: 3.5rem;
+  }
+
   .lg\:mb-15 {
     margin-bottom: 3.75rem;
+  }
+
+  .lg\:mb-2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .lg\:mb-2\.5 {
+    margin-bottom: 0.625rem;
+  }
+
+  .lg\:mb-20 {
+    margin-bottom: 5rem;
   }
 
   .lg\:mb-30 {
@@ -2124,6 +2290,10 @@ select {
 
   .lg\:mt-25 {
     margin-top: 6.25rem;
+  }
+
+  .lg\:mt-\[500px\] {
+    margin-top: 500px;
   }
 
   .lg\:mt-\[534px\] {
@@ -2153,6 +2323,10 @@ select {
     display: none;
   }
 
+  .lg\:h-screen {
+    height: 100vh;
+  }
+
   .lg\:w-103\.25 {
     width: 25.8125rem;
   }
@@ -2177,8 +2351,24 @@ select {
     width: 1280px;
   }
 
+  .lg\:w-\[192px\] {
+    width: 192px;
+  }
+
+  .lg\:w-\[200px\] {
+    width: 200px;
+  }
+
   .lg\:w-\[800px\] {
     width: 800px;
+  }
+
+  .lg\:w-auto {
+    width: auto;
+  }
+
+  .lg\:w-full {
+    width: 100%;
   }
 
   .lg\:grid-flow-col {
@@ -2191,6 +2381,10 @@ select {
 
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
   .lg\:grid-cols-6 {
@@ -2237,8 +2431,30 @@ select {
          column-gap: 1rem;
   }
 
+  .lg\:gap-x-5 {
+    -moz-column-gap: 1.25rem;
+         column-gap: 1.25rem;
+  }
+
   .lg\:gap-y-10 {
     row-gap: 2.5rem;
+  }
+
+  .lg\:gap-y-4 {
+    row-gap: 1rem;
+  }
+
+  .lg\:rounded-xl {
+    border-radius: 0.75rem;
+  }
+
+  .lg\:border {
+    border-width: 1px;
+  }
+
+  .lg\:border-\[\#262626\] {
+    --tw-border-opacity: 1;
+    border-color: rgb(38 38 38 / var(--tw-border-opacity));
   }
 
   .lg\:bg-seconderylite {
@@ -2254,12 +2470,20 @@ select {
     background-image: url('assets/images/laptop/banner-background.png');
   }
 
+  .lg\:bg-movie-backdrop-background {
+    background-image: url('assets/images/laptop/eternals-original-backdrop.jpg');
+  }
+
   .lg\:bg-cover {
     background-size: cover;
   }
 
   .lg\:p-10 {
     padding: 2.5rem;
+  }
+
+  .lg\:p-4 {
+    padding: 1rem;
   }
 
   .lg\:px-15 {
@@ -2309,3 +2533,5 @@ select {
     line-height: 1.75rem;
   }
 }
+
+

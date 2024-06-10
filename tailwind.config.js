@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./public/*.{html,js}"],
+  content: [
+    "./public/*.{html,js}",
+  ],
   theme: {
     //tailwind size=px/4
     //rem size=px/16
@@ -28,6 +30,8 @@ module.exports = {
         'header-background-mobile': "url('assets/images/mobile/banner-background.png')",
         'free-trial-background': "url('assets/images/laptop/free-trial-background.png')",
         'free-trial-background-mobile': "url('assets/images/mobile/free-trial-background.png')",
+        'movie-backdrop-background': "url('assets/images/laptop/eternals-original-backdrop.jpg')",
+        'movie-poster-background': "url('assets/images/mobile/eternals-original-poster.png')",
       },
       lineHeight: {
         '14': '3.5rem',

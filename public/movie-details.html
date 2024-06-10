@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies And Series</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-sans bg-tertiary">
+    <!-- header start -->
+    <header>
+        <!-- navbar start -->
+        <nav class="w-80 lg:w-[1280px] mx-auto ">
+            <div class="py-5 flex justify-between items-center">
+                <div class="w-80 flex justify-between items-center">
+                    <a href="index.html" class="flex justify-start items-center">
+                        <img src="assets/images/cine-craze-logo.png" alt="">
+                        <span class="text-white font-bold text-2xl ml-1">CineCraze</span>
+                    </a>
+                    <ul onclick="toggleNavMenu()" class="block lg:hidden">
+                        <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary"
+                            id="hamburger-icon">
+                            <img src="assets/images/mobile/hamburger-btn.png" alt="">
+                        </li>
+                        <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary hidden"
+                            id="close-icon">
+                            <img src="assets/images/mobile/close-btn.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul
+                        class="hidden lg:flex gap-x-1 text-lg bg-seconderylite font-normal border-[3px]  border-secondery rounded-xl p-2 text-[#BFBFBF]">
+                        <a href="index.html">
+                            <li class="py-2 px-4 hover:rounded-lg hover:bg-primary hover:text-white">
+                                Home
+                            </li>
+                        </a>
+                        <a href="movies-and-shows.html">
+                            <li
+                                class="py-2 px-4 bg-secondery border border-[#262626] rounded-lg  hover:bg-primary hover:text-white">
+                                Movies &
+                                Shows
+                            </li>
+                        </a>
+                        <a href="cine-request.html">
+                            <li class="py-2 px-4 hover:rounded-lg  hover:text-white hover:bg-primary">
+                                Cine Request
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="py-2 px-4 hover:rounded-lg hover:bg-primary hover:text-white">
+                                Subscriptions
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="hidden lg:block">
+                    <ul class="flex gap-x-3">
+                        <a href="">
+                            <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                <img src="assets/images/search-icon.png" alt="">
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class=" p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                <img src="assets/images/notification-icon.png" alt="">
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <!-- mobile bar -->
+            <div class="hidden lg:hidden w-80 mx-auto mt-10" id="myLinks">
+                <ul class="flex flex-col gap-y-3 text-xl">
+                    <li class="hover:text-primary"><a href="index.html">Home</a></li>
+                    <li class="text-primary font-medium"><a href="movies-and-shows.html">Movies & Shows</a></li>
+                    <li class="hover:text-primary"><a href="cine-request.html">Cine Request</a></li>
+                    <li class="hover:text-primary"><a href="#">Subscriptions</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- navbar end -->
+    </header>
+    <!-- header end -->
+    <!-- poster section start -->
+    <section>
+        <div class="w-80 lg:w-[1280px] mx-auto my-10 lg:mb-20">
+            <div
+                class="bg-top bg-no-repeat lg:bg-cover  rounded-xl bg-movie-poster-background lg:bg-movie-backdrop-background h-auto lg:h-screen w-80 lg:w-full mb-20">
+                <div
+                    class="flex flex-col justify-center items-center gap-y-4 bg-gradient-to-t from-tertiary from-0% to-transparent] to-100% rounded-xl">
+                    <h4 class="font-bold text-2xl lg:text-3xl mt-[360px] lg:mt-[500px]">Eternals</h4>
+                    <p class="hidden lg:block text-[#999999] text-base text-center w-4/5">The Eternals are a team of
+                        ancient
+                        aliens who
+                        have been living on Earth in secret for thousands of years. When an
+                        unexpected tragedy forces them out of the shadows, they are forced to reunite against mankind's
+                        most ancient enemy, the
+                        Deviants.</p>
+                    <button
+                        class="flex justify-center items-center gap-x-1 w-3/4 lg:w-auto px-4 py-3 bg-primary text-center rounded-md hover:bg-tertiary hover:outline hover:outline-primary mb-10 lg:mb-20">
+                        <img src="assets/images/play-btn.png" alt="">
+                        Play Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- poster section end -->
+    <!-- description section start -->
+    <section>
+        <div class="w-80 lg:w-[1280px] mx-auto my-20 lg:my-25 flex flex-col lg:flex-row gap-y-5 lg:gap-x-5">
+            <div
+                class="text-sm lg:text-base font-medium p-6 lg:p-10 bg-secondery rounded-[10px] border border-[#262626]">
+                <h6 class="text-[#999999] mb-2 lg:mb-2.5">Description</h6>
+                <p class="text-white">The Eternals are a team of
+                    ancient
+                    aliens who
+                    have been living on Earth in secret for thousands of years. When an
+                    unexpected tragedy forces them out of the shadows, they are forced to reunite against mankind's
+                    most ancient enemy, the
+                    Deviants.</p>
+            </div>
+            <div
+                class="flex flex-col justify-center items-start gap-y-5 text-sm lg:text-base font-medium p-6 lg:p-10 bg-secondery rounded-[10px] border border-[#262626]">
+                <div>
+                    <div class="flex justify-start items-center gap-x-1 mb-2 lg:mb-2.5">
+                        <img src="assets/images/released-year-icon.png" alt="">
+                        <h6 class="text-[#999999]">Released Date</h6>
+                    </div>
+                    <p class="text-white">2021</p>
+                </div>
+                <div>
+                    <div class="flex justify-start items-center flex-wrap gap-x-1 mb-2 lg:mb-2.5">
+                        <img src="assets/images/languages-icon.png" alt="">
+                        <h6 class="text-[#999999]">Available Languages</h6>
+                    </div>
+                    <div class="flex justify-start items-center gap-2.5">
+                        <button class="text-white px-3 py-2.5 bg-tertiary border border-[#262626] rounded-md">
+                            Telegu
+                        </button>
+                        <button class="text-white px-3 py-2.5 bg-tertiary border border-[#262626] rounded-md">
+                            Hindi
+                        </button>
+                        <button class="text-white px-3 py-2.5 bg-tertiary border border-[#262626] rounded-md">
+                            English
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex justify-start items-center flex-wrap gap-x-1 mb-2 lg:mb-2.5">
+                        <img src="assets/images/star-not-filled-icon.png" alt="">
+                        <h6 class="text-[#999999]">Ratings</h6>
+                    </div>
+                    <div class="flex justify-start items-center gap-2.5">
+                        <button class="text-left text-white px-3 py-2.5 bg-tertiary border border-[#262626] rounded-md">
+                            IMDB<br>8.2
+                        </button>
+                        <button class="text-left text-white px-3 py-2.5 bg-tertiary border border-[#262626] rounded-md">
+                            CINECRAZE <br>8.9
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex justify-start items-center flex-wrap gap-x-1 mb-2 lg:mb-2.5">
+                        <img src="assets/images/genres-icon.png" alt="">
+                        <h6 class="text-[#999999]">Genres</h6>
+                    </div>
+                    <div class="flex justify-start items-center gap-2.5">
+                        <button class="text-left text-white px-3 py-2.5 bg-tertiary border border-[#262626] rounded-md">
+                            Action
+                        </button>
+                        <button class="text-left text-white px-3 py-2.5 bg-tertiary border border-[#262626] rounded-md">
+                            Adventure
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <h6 class="text-[#999999] mb-2 lg:mb-2.5">Director</h6>
+                    <div class="flex justify-start items-center gap-2.5">
+                        <div
+                            class="w-64 flex justify-start items-center gap-x-3 text-left text-white p-3 bg-tertiary border border-[#262626] rounded-md">
+                            <img class="w-12.5" src="assets/images/chloe-zhao.jpg" alt="">
+                            <p>Chloé Zhao</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- description section end -->
+    <!-- free trial section start -->
+    <section>
+        <div
+            class="w-80 lg:w-[1280px] text-center lg:text-left lg:flex lg:justify-between lg:items-center bg-free-trial-background-mobile lg:bg-free-trial-background bg-center bg-no-repeat lg:bg-cover mx-auto px-7.5 py-12.5 lg:px-15 lg:py-20 rounded-xl border border-[#262626] mb-20 lg:mb-40">
+            <div class="mb-12.5 lg:mb-0">
+                <h4 class="font-bold text-2xl lg:text-[28px] mb-2.5">Start your free trial today!</h4>
+                <p class="font-normal text-sm lg:text-base text-[#999999]">This is a clear and concise call to
+                    action
+                    that encourages users to sign up for a free trial of
+                    CineCraze.</p>
+            </div>
+            <a href="">
+                <button
+                    class="px-4 py-3 bg-primary text-center rounded-md hover:bg-tertiary hover:outline hover:outline-primary ">
+                    Start Free Trial
+                </button>
+            </a>
+        </div>
+    </section>
+    <!-- free trial section end -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
