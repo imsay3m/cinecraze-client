@@ -17,7 +17,7 @@
             <div class="py-5 flex justify-between items-center">
                 <div class="w-80 flex justify-between items-center">
                     <a href="index.html" class="flex justify-start items-center">
-                        <img src="assets/images/cine-craze-logo.png" alt="">
+                        <img src="assets/images/navbar/cinecraze-logo.png" alt="">
                         <span class="text-white font-bold text-2xl ml-1">CineCraze</span>
                     </a>
                     <ul onclick="toggleNavMenu()" class="block lg:hidden">
@@ -59,17 +59,41 @@
                     </ul>
                 </div>
                 <div class="hidden lg:block">
-                    <ul class="flex gap-x-3">
-                        <a href="">
-                            <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
-                                <img src="assets/images/search-icon.png" alt="">
-                            </li>
-                        </a>
-                        <a href="">
-                            <li class=" p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
-                                <img src="assets/images/notification-icon.png" alt="">
-                            </li>
-                        </a>
+                    <ul class="">
+                        <div class="hidden gap-x-3">
+                            <a href="">
+                                <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                    <img src="assets/images/navbar/search-icon.png" alt="">
+                                </li>
+                            </a>
+                            <a href="">
+                                <li class=" p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                    <img src="assets/images/navbar/notification-icon.png" alt="">
+                                </li>
+                            </a>
+                            <a href="profile.html">
+                                <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                    <img src="assets/images/navbar/profile.png" alt="">
+                                </li>
+                            </a>
+                            <button>
+                                <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                    <img src="assets/images/navbar/logout.png" alt="">
+                                </li>
+                            </button>
+                        </div>
+                        <div class="flex gap-x-3">
+                            <a href="login.html">
+                                <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                    <img src="assets/images/navbar/login.png" alt="">
+                                </li>
+                            </a>
+                            <a href="signup.html">
+                                <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                    <img src="assets/images/navbar/sign-up.png" alt="">
+                                </li>
+                            </a>
+                        </div>
                     </ul>
                 </div>
             </div>
@@ -80,6 +104,42 @@
                     <li class="hover:text-primary"><a href="movies-and-shows.html">Movies & Shows</a></li>
                     <li class="text-primary font-medium"><a href="cine-request.html">Cine Request</a></li>
                     <li class="hover:text-primary"><a href="#">Subscriptions</a></li>
+                    <div>
+                        <div class="hidden gap-3">
+                            <a href="">
+                                <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                    <img src="assets/images/navbar/search-icon.png" alt="">
+                                </li>
+                            </a>
+                            <a href="">
+                                <li class=" p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                    <img src="assets/images/navbar/notification-icon.png" alt="">
+                                </li>
+                            </a>
+                            <a href="profile.html">
+                                <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                    <img src="assets/images/navbar/profile.png" alt="">
+                                </li>
+                            </a>
+                            <button>
+                                <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                    <img src="assets/images/navbar/logout.png" alt="">
+                                </li>
+                            </button>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="login.html">
+                                <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                    <img src="assets/images/navbar/login.png" alt="">
+                                </li>
+                            </a>
+                            <a href="signup.html">
+                                <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                    <img src="assets/images/navbar/sign-up.png" alt="">
+                                </li>
+                            </a>
+                        </div>
+                    </div>
                 </ul>
             </div>
         </nav>
@@ -106,14 +166,14 @@
                 <form method="post">
                     <div class="grid lg:grid-cols-1 gap-y-5 lg:gap-y-10">
                         <div class="w-full">
-                            <label for="first-name" class="block text-white text-base font-semibold mb-3">Full
+                            <label for="full-name" class="block text-white text-base font-semibold mb-3">Full
                                 Name</label>
                             <input type="text" id="full-name"
                                 class="w-full p-4 bg-tertiary border border-[#262626] focus:border-[#262626] focus:outline-none focus:ring-0 focus:shadow-md focus:shadow-red-600 rounded-md"
                                 placeholder="Enter Full Name" autocomplete="name">
                         </div>
                         <div class="w-full">
-                            <label for="last-name" class="block text-white text-base font-semibold mb-3">Email</label>
+                            <label for="email" class="block text-white text-base font-semibold mb-3">Email</label>
                             <input type="email" id="email"
                                 class="w-full p-4 bg-tertiary border border-[#262626] focus:border-[#262626] focus:outline-none focus:ring-0 focus:shadow-md focus:shadow-red-600 rounded-md"
                                 placeholder="Enter your Email">
@@ -125,7 +185,7 @@
                             <textarea name="message" id="message" rows="5"
                                 class="w-full p-4 text-white bg-tertiary border border-[#262626] focus:border-[#262626] focus:outline-none focus:ring-0 focus:shadow-md focus:shadow-red-600 rounded-md">🎬 Movie/Show Request
 📌 Title: [Enter Movie/Show Title]
-🎥 Release Year: [Specify Movie Release Year(s)]
+🎥 Release Year: [Specify Release Year(s)]
 📝 Language: [Specify Language]
 📎 IMDB Link: [Optional]</textarea>
                         </div>
@@ -182,10 +242,10 @@
                             </div>
                             <ul>
                                 <li onclick="toggleFAQ('plus-btn-1')" class="hidden w-[24px]" id="plus-btn-1">
-                                    <img src="assets/images/plus-icon.png" alt="">
+                                    <img src="assets/images/faq/plus-icon.png" alt="">
                                 </li>
                                 <li onclick="toggleFAQ('minus-btn-1')" class="block w-[24px]" id="minus-btn-1">
-                                    <img src="assets/images/minus-icon.png" alt="">
+                                    <img src="assets/images/faq/minus-icon.png" alt="">
                                 </li>
                             </ul>
                         </div>
@@ -210,10 +270,10 @@
                             </div>
                             <ul>
                                 <li onclick="toggleFAQ('plus-btn-2')" class="block w-[24px]" id="plus-btn-2">
-                                    <img src="assets/images/plus-icon.png" alt="">
+                                    <img src="assets/images/faq/plus-icon.png" alt="">
                                 </li>
                                 <li onclick="toggleFAQ('minus-btn-2')" class="hidden w-[24px]" id="minus-btn-2">
-                                    <img src="assets/images/minus-icon.png" alt="">
+                                    <img src="assets/images/faq/minus-icon.png" alt="">
                                 </li>
                             </ul>
                         </div>
@@ -238,10 +298,10 @@
                             </div>
                             <ul>
                                 <li onclick="toggleFAQ('plus-btn-3')" class="block w-[24px]" id="plus-btn-3">
-                                    <img src="assets/images/plus-icon.png" alt="">
+                                    <img src="assets/images/faq/plus-icon.png" alt="">
                                 </li>
                                 <li onclick="toggleFAQ('minus-btn-3')" class="hidden w-[24px]" id="minus-btn-3">
-                                    <img src="assets/images/minus-icon.png" alt="">
+                                    <img src="assets/images/faq/minus-icon.png" alt="">
                                 </li>
                             </ul>
                         </div>
@@ -266,10 +326,10 @@
                             </div>
                             <ul>
                                 <li onclick="toggleFAQ('plus-btn-4')" class="block w-[24px]" id="plus-btn-4">
-                                    <img src="assets/images/plus-icon.png" alt="">
+                                    <img src="assets/images/faq/plus-icon.png" alt="">
                                 </li>
                                 <li onclick="toggleFAQ('minus-btn-4')" class="hidden w-[24px]" id="minus-btn-4">
-                                    <img src="assets/images/minus-icon.png" alt="">
+                                    <img src="assets/images/faq/minus-icon.png" alt="">
                                 </li>
                             </ul>
                         </div>
@@ -294,10 +354,10 @@
                             </div>
                             <ul>
                                 <li onclick="toggleFAQ('plus-btn-5')" class="block w-[24px]" id="plus-btn-5">
-                                    <img src="assets/images/plus-icon.png" alt="">
+                                    <img src="assets/images/faq/plus-icon.png" alt="">
                                 </li>
                                 <li onclick="toggleFAQ('minus-btn-5')" class="hidden w-[24px]" id="minus-btn-5">
-                                    <img src="assets/images/minus-icon.png" alt="">
+                                    <img src="assets/images/faq/minus-icon.png" alt="">
                                 </li>
                             </ul>
                         </div>
@@ -322,10 +382,10 @@
                             </div>
                             <ul>
                                 <li onclick="toggleFAQ('plus-btn-6')" class="block w-[24px]" id="plus-btn-6">
-                                    <img src="assets/images/plus-icon.png" alt="">
+                                    <img src="assets/images/faq/plus-icon.png" alt="">
                                 </li>
                                 <li onclick="toggleFAQ('minus-btn-6')" class="hidden w-[24px]" id="minus-btn-6">
-                                    <img src="assets/images/minus-icon.png" alt="">
+                                    <img src="assets/images/faq/minus-icon.png" alt="">
                                 </li>
                             </ul>
                         </div>
@@ -350,10 +410,10 @@
                             </div>
                             <ul>
                                 <li onclick="toggleFAQ('plus-btn-7')" class="block w-[24px]" id="plus-btn-7">
-                                    <img src="assets/images/plus-icon.png" alt="">
+                                    <img src="assets/images/faq/plus-icon.png" alt="">
                                 </li>
                                 <li onclick="toggleFAQ('minus-btn-7')" class="hidden w-[24px]" id="minus-btn-7">
-                                    <img src="assets/images/minus-icon.png" alt="">
+                                    <img src="assets/images/faq/minus-icon.png" alt="">
                                 </li>
                             </ul>
                         </div>
@@ -377,10 +437,10 @@
                         </div>
                         <ul>
                             <li onclick="toggleFAQ('plus-btn-8')" class="block w-[24px]" id="plus-btn-8">
-                                <img src="assets/images/plus-icon.png" alt="">
+                                <img src="assets/images/faq/plus-icon.png" alt="">
                             </li>
                             <li onclick="toggleFAQ('minus-btn-8')" class="hidden w-[24px]" id="minus-btn-8">
-                                <img src="assets/images/minus-icon.png" alt="">
+                                <img src="assets/images/faq/minus-icon.png" alt="">
                             </li>
                         </ul>
                     </div>
@@ -437,7 +497,7 @@
             </ul>
             <ul class="text-[#999999] text-sm font-medium flex flex-col justify-start gap-y-2">
                 <li class="text-white text-base mb-4">
-                    <a class="hover:text-primary" href="#">Movies</a>
+                    <a class="hover:text-primary" href="movies-and-shows.html">Movies</a>
                 </li>
                 <li>
                     <a class="hover:text-primary" href="#">Genres</a>
@@ -454,7 +514,7 @@
             </ul>
             <ul class="text-[#999999] text-sm font-medium flex flex-col justify-start gap-y-2">
                 <li class="text-white text-base mb-4">
-                    <a class="hover:text-primary" href="#">Shows</a>
+                    <a class="hover:text-primary" href="movies-and-shows.html">Shows</a>
                 </li>
                 <li>
                     <a class="hover:text-primary" href="#">Genres</a>
@@ -498,17 +558,17 @@
                 <div class="flex gap-x-2.5">
                     <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
                         <a href="">
-                            <img src="assets/images/fb-icon.png" alt="">
+                            <img src="assets/images/footer/fb-icon.png" alt="">
                         </a>
                     </li>
                     <li class=" p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
                         <a href="">
-                            <img src="assets/images/x-icon.png" alt="">
+                            <img src="assets/images/footer/x-icon.png" alt="">
                         </a>
                     </li>
                     <li class=" p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
                         <a href="">
-                            <img src="assets/images/linkedin-icon.png" alt="">
+                            <img src="assets/images/footer/linkedin-icon.png" alt="">
                         </a>
                     </li>
                 </div>
