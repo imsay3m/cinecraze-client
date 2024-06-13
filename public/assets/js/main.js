@@ -41,20 +41,73 @@ function toggleFAQ(btnId) {
     }
 }
 
-//3. SWIPER CAROUSEL
-var swiper = new Swiper(".mySwiper", {
-    spaceBetween: 30,
-    centeredSlides: true,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-});
+//3. GET VALUE FROM FORM
+function getValue(id) {
+    return document.getElementById(id).value;
+}
+
+//4. USER INFORMATION
+const getUserId = localStorage.getItem('cinecraze_user_id');
+const getUserType = localStorage.getItem('cinecraze_user_type');
+const getUserToken = localStorage.getItem('cinecraze_user_token');
+
+//4. LOGIN REDIRECTOR
+const loginRedirector = () => {
+    const token = localStorage.getItem('cinecraze_token');
+    if (!token) {
+        // User is not authenticated, redirect to login page or perform any other action
+        window.location.href = "login.html"; // Redirect to the login page
+        return;
+    }
+}
+
+//5. AUTHENTICATED CHECKER
+const isAuthenticated = () => {
+    const token = localStorage.getItem("cinecraze_token");
+    return token !== null;
+};
+
+//6. TOGGLE AUTH BUTTON
+const toggleAuthElements = () => {
+    const authenticatedButtons = document.querySelectorAll('#authenticated-user, #authenticated-user-mobile');
+    const unauthenticatedButtons = document.querySelectorAll('#unauthenticated-user, #unauthenticated-user-mobile');
+    if (isAuthenticated()) {
+        authenticatedButtons.forEach(button => {
+            if (button.classList.contains('hidden')) {
+                button.classList.remove('hidden');
+            }
+            if (!button.classList.contains('flex')) {
+                button.classList.add('flex');
+            }
+        })
+        unauthenticatedButtons.forEach(button => {
+            if (button.classList.contains('flex')) {
+                button.classList.remove('flex');
+            }
+            if (!button.classList.contains('hidden')) {
+                button.classList.add('hidden');
+            }
+        })
+    } else {
+        authenticatedButtons.forEach(button => {
+            if (button.classList.contains('flex')) {
+                button.classList.remove('flex');
+            }
+            if (!button.classList.contains('hidden')) {
+                button.classList.add('hidden');
+            }
+        })
+        unauthenticatedButtons.forEach(button => {
+            if (button.classList.contains('hidden')) {
+                button.classList.remove('hidden');
+            }
+            if (!button.classList.contains('flex')) {
+                button.classList.add('flex');
+            }
+        })
+    }
+};
+
+
+// Call the function to toggle visibility on page load
+window.onload = toggleAuthElements;

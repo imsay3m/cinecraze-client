@@ -59,7 +59,7 @@
                 </div>
                 <div class="hidden lg:block">
                     <ul class="">
-                        <div class="hidden gap-x-3">
+                        <div class="hidden gap-x-3" id="authenticated-user">
                             <a href="">
                                 <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
                                     <img src="assets/images/navbar/search-icon.png" alt="">
@@ -81,7 +81,7 @@
                                 </li>
                             </button>
                         </div>
-                        <div class="flex gap-x-3">
+                        <div class="flex gap-x-3" id="unauthenticated-user">
                             <a href="login.html">
                                 <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
                                     <img src="assets/images/navbar/login.png" alt="">
@@ -104,7 +104,7 @@
                     <li class="text-primary font-medium"><a href="cine-request.html">Cine Request</a></li>
                     <li class="hover:text-primary"><a href="#">Subscriptions</a></li>
                     <div>
-                        <div class="hidden gap-3">
+                        <div class="hidden gap-3" id="authenticated-user-mobile">
                             <a href="">
                                 <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
                                     <img src="assets/images/navbar/search-icon.png" alt="">
@@ -126,7 +126,7 @@
                                 </li>
                             </button>
                         </div>
-                        <div class="flex gap-3">
+                        <div class="flex gap-3" id="unauthenticated-user-mobile">
                             <a href="login.html">
                                 <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
                                     <img src="assets/images/navbar/login.png" alt="">
@@ -163,23 +163,25 @@
             </div>
             <div class="lg:w-[800px] lg:bg-seconderylite p-6 lg:p-10 rounded-[10px] border border-[#262626]">
                 <form method="post">
-                    <div class="grid lg:grid-cols-1 gap-y-5 lg:gap-y-10">
+                    <div class="grid lg:grid-cols-1 gap-y-5 lg:gap-y-6">
                         <h3 class="text-center font-bold text-white text-[28px] lg:text-[38px] mb-2.5">Login Now!</h3>
+                        <div class="mb-2.5" id="error-container">
+                        </div>
                         <div class="w-full">
-                            <label for="email" class="block text-white text-base font-semibold mb-3">Email</label>
-                            <input type="email" id="email"
+                            <label for="email-login" class="block text-white text-base font-semibold mb-3">Email</label>
+                            <input type="email" id="email-login"
                                 class="w-full p-4 bg-tertiary border border-[#262626] focus:border-[#262626] focus:outline-none focus:ring-0 focus:shadow-md focus:shadow-red-600 rounded-md"
                                 placeholder="Enter your Email" autocomplete="email">
                         </div>
                         <div class="w-full">
-                            <label for="password" class="block text-white text-base font-semibold mb-3">
+                            <label for="password-login" class="block text-white text-base font-semibold mb-3">
                                 Password
                             </label>
-                            <input type="password" id="password"
+                            <input type="password" id="password-login"
                                 class="w-full p-4 bg-tertiary border border-[#262626] focus:border-[#262626] focus:outline-none focus:ring-0 focus:shadow-md focus:shadow-red-600 rounded-md"
                                 placeholder="Enter your Password" autocomplete="current-password">
                         </div>
-                        <button
+                        <button type="submit" onclick="handleLogin(event)"
                             class="mb-6 px-4 py-3 bg-primary text-center rounded-md hover:bg-tertiary hover:outline hover:outline-primary text-lg font-semibold">
                             Login
                         </button>
@@ -313,6 +315,7 @@
         </div>
     </footer>
     <!-- footer end -->
+    <script src="assets/js/auth.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 

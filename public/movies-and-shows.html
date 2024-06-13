@@ -62,7 +62,7 @@
                 </div>
                 <div class="hidden lg:block">
                     <ul class="">
-                        <div class="hidden gap-x-3">
+                        <div class="hidden gap-x-3" id="authenticated-user">
                             <a href="">
                                 <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
                                     <img src="assets/images/navbar/search-icon.png" alt="">
@@ -84,7 +84,7 @@
                                 </li>
                             </button>
                         </div>
-                        <div class="flex gap-x-3">
+                        <div class="flex gap-x-3" id="unauthenticated-user">
                             <a href="login.html">
                                 <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
                                     <img src="assets/images/navbar/login.png" alt="">
@@ -107,7 +107,7 @@
                     <li class="hover:text-primary"><a href="cine-request.html">Cine Request</a></li>
                     <li class="hover:text-primary"><a href="#">Subscriptions</a></li>
                     <div>
-                        <div class="hidden gap-3">
+                        <div class="hidden gap-3" id="authenticated-user-mobile">
                             <a href="">
                                 <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
                                     <img src="assets/images/navbar/search-icon.png" alt="">
@@ -129,7 +129,7 @@
                                 </li>
                             </button>
                         </div>
-                        <div class="flex gap-3">
+                        <div class="flex gap-3" id="unauthenticated-user-mobile">
                             <a href="login.html">
                                 <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
                                     <img src="assets/images/navbar/login.png" alt="">
@@ -612,6 +612,7 @@
     <!-- footer end -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/swiper.js"></script>
 </body>
 
 </html>
