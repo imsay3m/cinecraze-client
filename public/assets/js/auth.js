@@ -1,4 +1,4 @@
-if (getToken) {
+if (getUserToken) {
     // User is authenticated, redirect to userDetails page
     window.location.href = "profile.html";
 }
