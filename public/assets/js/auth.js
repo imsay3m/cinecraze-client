@@ -5,7 +5,6 @@ if (getUserToken) {
 
 const handleSignup = (event) => {
     event.preventDefault()
-    loginRedirector()
     const signup_api = 'https://cinecraze-server.onrender.com/user/register/';
 
     const name = getValue("full-name")
@@ -14,9 +13,9 @@ const handleSignup = (event) => {
     const confirm_password = getValue("confirm-password")
     const user_type = "basic"
     // console.log(info)
-    if (password === confirm_password) {
-        if (/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(password)) {
-            if (email) {
+    if (email) {
+        if (password === confirm_password) {
+            if (/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(password)) {
                 try {
                     const formData = new FormData();
                     formData.append("name", name);
@@ -27,32 +26,36 @@ const handleSignup = (event) => {
                         method: "POST",
                         body: formData,
                     })
-                        .then((response) => {
-                            if (response.status === 200) {
-                                console.log(response.statusText);
-                                showAlert(response.statusText)
+                        .then(response => response.json().then(data => ({
+                            status: response.status,
+                            body: data
+                        })))
+                        .then(({ status, body }) => {
+                            if (status === 200) {
+                                showSuccess(body.message);
                             } else {
-                                console.log("Registration failed with status code:", response.status);
-                                console.log(response.statusText);
-                                showAlert(response.statusText)
+                                showAlert(body.message || "Registration failed. Please try again.");
                             }
                         })
-
+                        .catch(err => {
+                            showAlert("An error occurred. Please try again later.");
+                            console.error(err);
+                        });
                 } catch (err) {
                     console.log(err.message)
                     console.log(err)
                 }
             }
             else {
-                showAlert('Please enter a valid email address.')
+                showAlert("Password must contain at least one letter, one digit, and be at least 8 characters long.")
             }
         }
         else {
-            showAlert("Password must contain at least one letter, one digit, and be at least 8 characters long.")
+            showAlert("Your passwords do not match.")
         }
     }
     else {
-        showAlert("Your passwords do not match.")
+        showAlert("Please enter a valid email address and your full name.")
     }
 }
 
@@ -109,13 +112,22 @@ const handleLogout = () => {
 
 
 const showAlert = (message) => {
-    const parent = document.getElementById("error-container")
+    const parent = document.getElementById("alert-container")
+    parent.classList.remove("hidden")
     parent.innerHTML = ""
-    const alertDiv = document.createElement("div");
-    alertDiv.className = "alert alert-warning"
-    alertDiv.role = "alert"
-    alertDiv.innerHTML = `
-    <span class="font-medium text-lg">${message}</span>
+    parent.innerHTML = `
+<svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+<span class="font-medium text-lg hover:text-primary">${message}</span>
     `
-    parent.appendChild(alertDiv)
+}
+
+
+const showSuccess = (message) => {
+    const parent = document.getElementById("success-container")
+    parent.classList.remove("hidden")
+    parent.innerHTML = ""
+    parent.innerHTML = `
+<svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+<span class="font-medium text-lg hover:text-white">${message}</span>
+    `
 }
