@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     "./public/*.{html,js}",
+    "./public/assets/js/*.js",
   ],
   theme: {
     //tailwind size=px/4
