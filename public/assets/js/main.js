@@ -135,3 +135,20 @@ const showSuccess = (message) => {
 <span class="font-medium text-lg hover:text-white">${message}</span>
     `
 }
+
+// 8.DATE CONVERTER
+const convertDate = (the_date) => {
+    const date = new Date(the_date);
+    const month = date.toLocaleString('default', { month: 'short' });
+    const day = date.getDate();
+    const year = date.getFullYear();
+    const converted_date = `${day} ${month} ${year}`;
+    // console.log(converted_date);
+    return converted_date;
+}
+
+// 9. GET PARAMETERS FROM URL
+const getParams = () => {
+    const params = new URLSearchParams(window.location.search);
+    return params;
+}

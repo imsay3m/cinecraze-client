@@ -1692,18 +1692,6 @@ select {
   padding-bottom: 0.25rem;
 }
 
-.table-sm :not(thead):not(tfoot) tr {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-.table-sm :where(th, td) {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
 .tooltip {
   position: relative;
   display: inline-block;
@@ -1988,16 +1976,12 @@ select {
   height: 1.5rem;
 }
 
-.h-68 {
-  height: 17rem;
-}
-
 .h-auto {
   height: auto;
 }
 
-.h-56 {
-  height: 14rem;
+.min-h-56 {
+  min-height: 14rem;
 }
 
 .w-12 {
@@ -2888,6 +2872,11 @@ select {
     justify-content: space-between;
   }
 
+  .lg\:gap-x-1 {
+    -moz-column-gap: 0.25rem;
+         column-gap: 0.25rem;
+  }
+
   .lg\:gap-x-12 {
     -moz-column-gap: 3rem;
          column-gap: 3rem;
@@ -2896,16 +2885,6 @@ select {
   .lg\:gap-x-12\.5 {
     -moz-column-gap: 3.125rem;
          column-gap: 3.125rem;
-  }
-
-  .lg\:gap-x-2 {
-    -moz-column-gap: 0.5rem;
-         column-gap: 0.5rem;
-  }
-
-  .lg\:gap-x-2\.5 {
-    -moz-column-gap: 0.625rem;
-         column-gap: 0.625rem;
   }
 
   .lg\:gap-x-20 {
@@ -2923,12 +2902,8 @@ select {
          column-gap: 1.25rem;
   }
 
-  .lg\:gap-y-2 {
-    row-gap: 0.5rem;
-  }
-
-  .lg\:gap-y-2\.5 {
-    row-gap: 0.625rem;
+  .lg\:gap-y-1 {
+    row-gap: 0.25rem;
   }
 
   .lg\:gap-y-4 {

@@ -17,7 +17,9 @@ const newlyAddedMovies = () => {
                     <img class="w-[128px] lg:w-[200px] rounded-[10px]" src=${element.poster_url} alt="${element.title}">
                     <div class="flex flex-col gap-y-1">
                         <div class="tooltip" data-tip="${element.title}">
-                                <h5 class="text-left font-medium text-sm lg:text-base line-clamp-1">${element.title}</h5>
+                                <h5 class="text-left font-medium text-sm lg:text-base line-clamp-1">
+                                <a href="movie-details.html?tmdb_id=${element.tmdb_id}">${element.title}</a>
+                                </h5>
                             </div>
                         <div class="flex gap-x-2 justify-start items-center text-[#999999] text-sm font-light">
                             <div class="flex gap-x-2 justify-start items-center ">
@@ -33,16 +35,6 @@ const newlyAddedMovies = () => {
         .catch(error => {
             console.error("Error while fetching movies from api:", error);
         });
-}
-
-const convertDate = (the_date) => {
-    const date = new Date(the_date);
-    const month = date.toLocaleString('default', { month: 'short' });
-    const day = date.getDate();
-    const year = date.getFullYear();
-    const converted_date = `${day} ${month} ${year}`;
-    // console.log(converted_date);
-    return converted_date;
 }
 
 newlyAddedMovies()
