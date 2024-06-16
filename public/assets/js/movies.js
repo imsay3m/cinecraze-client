@@ -14,7 +14,9 @@ const newlyAddedMovies = () => {
                 const movie_card = document.createElement('div');
                 movie_card.classList.add('p-3', 'lg:p-4', 'flex', 'flex-col', 'flex-wrap', 'rounded-[10px]', 'bg-secondery', 'mx-auto', 'gap-y-2', 'lg:gap-y-4');
                 movie_card.innerHTML = `
+                    <a href="movie-details.html?tmdb_id=${element.tmdb_id}">
                     <img class="w-[128px] lg:w-[200px] rounded-[10px]" src=${element.poster_url} alt="${element.title}">
+                    </a>
                     <div class="flex flex-col gap-y-1">
                         <div class="tooltip" data-tip="${element.title}">
                                 <h5 class="text-left font-medium text-sm lg:text-base line-clamp-1">
