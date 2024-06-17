@@ -894,6 +894,19 @@ select {
   padding-bottom: 0.5rem;
 }
 
+.hero {
+  display: grid;
+  width: 100%;
+  place-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero > * {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
 .input {
   flex-shrink: 1;
   -webkit-appearance: none;
@@ -1157,6 +1170,17 @@ select {
   border-color: transparent;
   --tw-bg-opacity: 1;
   background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
+}
+
+.toast {
+  position: fixed;
+  display: flex;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  flex-direction: column;
+  white-space: nowrap;
+  gap: 0.5rem;
+  padding: 1rem;
 }
 
 .toggle {
@@ -1682,6 +1706,10 @@ select {
   --tw-placeholder-opacity: 0.2;
 }
 
+.toast > * {
+  animation: toast-pop 0.25s ease-out;
+}
+
 @keyframes toast-pop {
   0% {
     transform: scale(0.9);
@@ -1797,6 +1825,63 @@ select {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: repeat(1, minmax(0, 1fr));
+}
+
+:where(.toast) {
+  bottom: 0px;
+  inset-inline-end: 0px;
+  inset-inline-start: auto;
+  top: auto;
+  --tw-translate-x: 0px;
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.toast:where(.toast-start) {
+  inset-inline-end: auto;
+  inset-inline-start: 0px;
+  --tw-translate-x: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.toast:where(.toast-center) {
+  inset-inline-end: 50%;
+  inset-inline-start: 50%;
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+:is([dir="rtl"] .toast:where(.toast-center)) {
+  --tw-translate-x: 50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.toast:where(.toast-end) {
+  inset-inline-end: 0px;
+  inset-inline-start: auto;
+  --tw-translate-x: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.toast:where(.toast-bottom) {
+  bottom: 0px;
+  top: auto;
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.toast:where(.toast-middle) {
+  bottom: auto;
+  top: 50%;
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.toast:where(.toast-top) {
+  bottom: auto;
+  top: 0px;
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .tooltip {
@@ -1983,40 +2068,12 @@ select {
   position: relative;
 }
 
-.top-0 {
-  top: 0px;
-}
-
-.top-\[50\%\] {
-  top: 50%;
-}
-
-.left-\[50\%\] {
-  left: 50%;
-}
-
-.top-1 {
-  top: 0.25rem;
-}
-
-.top-10 {
-  top: 2.5rem;
-}
-
-.-top-10 {
-  top: -2.5rem;
-}
-
-.-top-5 {
-  top: -1.25rem;
-}
-
 .-top-4 {
   top: -1rem;
 }
 
-.z-10 {
-  z-index: 10;
+.top-0 {
+  top: 0px;
 }
 
 .mx-auto {
@@ -2214,10 +2271,6 @@ select {
 
 .h-6 {
   height: 1.5rem;
-}
-
-.h-auto {
-  height: auto;
 }
 
 .h-full {
@@ -2517,10 +2570,6 @@ select {
   background-image: url('assets/images/mobile/banner-background.png');
 }
 
-.bg-movie-poster-background {
-  background-image: url('assets/images/mobile/eternals-original-poster.png');
-}
-
 .from-\[\#0F0F0F\] {
   --tw-gradient-from: #0F0F0F var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(15 15 15 / 0) var(--tw-gradient-to-position);
@@ -2577,10 +2626,6 @@ select {
   --tw-gradient-to-position: 100%;
 }
 
-.to-90\% {
-  --tw-gradient-to-position: 90%;
-}
-
 .bg-center {
   background-position: center;
 }
@@ -2595,11 +2640,6 @@ select {
 
 .stroke-current {
   stroke: currentColor;
-}
-
-.object-center {
-  -o-object-position: center;
-     object-position: center;
 }
 
 .p-0 {
@@ -3045,10 +3085,6 @@ select {
     height: 23.125rem;
   }
 
-  .lg\:h-screen {
-    height: 100vh;
-  }
-
   .lg\:w-103\.25 {
     width: 25.8125rem;
   }
@@ -3203,10 +3239,6 @@ select {
 
   .lg\:bg-header-background {
     background-image: url('assets/images/laptop/banner-background.png');
-  }
-
-  .lg\:bg-movie-backdrop-background {
-    background-image: url('assets/images/laptop/eternals-original-backdrop.jpg');
   }
 
   .lg\:bg-cover {

@@ -12,11 +12,37 @@ const movieDetails = () => {
         .then(response => response.json())
         .then(data => {
             const element = data[0];
-            console.log(element);
-            const demo = document.getElementById('demo-build')
-            demo.classList.remove('flex');
-            demo.classList.add('hidden');
-            demo.innerHTML = ''
+            // console.log(element);
+            const poster_path = element.poster_url;
+            const backdrop_path = element.backdrop_url;
+            const title = element.title;
+            const overview = element.overview;
+            const banner = document.getElementById('movie-banner-container');
+            const demo_banner = document.getElementById('demo-banner');
+            demo_banner.innerHTML = ''
+            const banner_child_div = document.createElement('div');
+            banner_child_div.classList.add('relative', 'w-80', 'lg:w-full', 'mb-20');
+            banner_child_div.innerHTML =
+                `
+                <div class="absolute top-0 bg-gradient-to-t from-tertiary from-0% to-transparent to-125% w-full h-full">
+                </div>
+                <img class="rounded-xl hidden lg:block" src=${backdrop_path} alt="">
+                <img class="rounded-xl block lg:hidden" src=${poster_path} alt="">
+                <div class="w-full absolute -top-4 lg:-top-5 flex flex-col justify-center items-center gap-y-4">
+                    <h4 class="text-center font-bold text-2xl lg:text-3xl mt-[360px] lg:mt-[500px]">${title}</h4>
+                    <p class="hidden lg:block text-[#999999] text-base text-center w-4/5">${overview}</p>
+                    <button class="flex justify-center items-center gap-x-1 w-3/4 lg:w-auto px-4 py-3 bg-primary text-center rounded-md hover:bg-tertiary hover:outline hover:outline-primary mb-10 lg:mb-20">
+                        <img src="assets/images/movie-details/play-btn.png" alt="">
+                            Play Now
+                    </button>
+                </div>
+                `
+            banner.appendChild(banner_child_div);
+
+            const demo_details = document.getElementById('demo-details')
+            demo_details.classList.remove('flex');
+            demo_details.classList.add('hidden');
+            demo_details.innerHTML = ''
             const downloadUrls = element.download_urls.map(key => `
                 <tr>
                     <td class="text-primary"><a href=${key.download_url} target="_blank" rel="noopener noreferrer">Download</a></td>
@@ -40,16 +66,17 @@ const movieDetails = () => {
                     ${language}
                 </button>`).join('');
             const release_date = convertDate(element.release_date);
-            const parent_div = document.querySelector('#movie-details-container');
-            parent_div.classList.remove('hidden');
-            const child_div = document.createElement('div');
-            child_div.classList.add('w-80', 'lg:w-[1280px]', 'mx-auto', 'my-20', 'lg:my-25', 'flex', 'flex-col', 'lg:flex-row', 'gap-y-5', 'lg:gap-x-5');
-            child_div.innerHTML = `
+            const details_div = document.querySelector('#movie-details-container');
+            details_div.classList.remove('hidden');
+            const details_child_div = document.createElement('div');
+            details_child_div.classList.add('w-80', 'lg:w-[1280px]', 'mx-auto', 'my-20', 'lg:my-25', 'flex', 'flex-col', 'lg:flex-row', 'gap-y-5', 'lg:gap-x-5');
+            details_child_div.innerHTML =
+                `
             <div class="flex flex-col gap-y-5">
                     <div
                         class="self-start text-sm lg:text-base font-medium p-6 lg:p-10 bg-secondery rounded-[10px] border border-[#262626]">
                         <h6 class="text-[#999999] mb-2 lg:mb-2.5">Description</h6>
-                        <p class="text-white">${element.overview}</p>
+                        <p class="text-white">${overview}</p>
                     </div>
                     <div class="flex flex-col lg:flex-row gap-y-5 lg:gap-x-5">
                         <div
@@ -138,7 +165,7 @@ const movieDetails = () => {
                     </div>
                 </div>
             `
-            parent_div.appendChild(child_div);
+            details_div.appendChild(details_child_div);
         })
 }
 window.onload = movieDetails();
