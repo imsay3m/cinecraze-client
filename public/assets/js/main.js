@@ -47,9 +47,9 @@ function getValue(id) {
 }
 
 //4. USER INFORMATION
-const getUserId = localStorage.getItem('cinecraze_user_id');
-const getUserType = localStorage.getItem('cinecraze_user_type');
-const getUserToken = localStorage.getItem('cinecraze_user_token');
+const user_id = localStorage.getItem('cinecraze_user_id');
+const user_type = localStorage.getItem('cinecraze_user_type');
+const user_token = localStorage.getItem('cinecraze_user_token');
 
 //4. LOGIN REDIRECTOR
 const loginRedirector = () => {
@@ -151,4 +151,28 @@ const convertDate = (the_date) => {
 const getParams = () => {
     const params = new URLSearchParams(window.location.search);
     return params;
+}
+
+// 10.LOGOUT FUNCTION
+const handleLogout = () => {
+    loginRedirector()
+    const logout_api = 'https://cinecraze-server.onrender.com/user/logout/';
+    const token = localStorage.getItem('cinecraze_token')
+    fetch(logout_api, {
+        method: "GET",
+        authorization: `Token ${token}`,
+        headers: { "content-type": "application/json" },
+    })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+            localStorage.removeItem('cinecraze_token')
+            localStorage.removeItem('cinecraze_user_id')
+            localStorage.removeItem('cinecraze_user_type')
+            window.location.href = "login.html"; // Redirect to the home page after successful logout
+        })
+}
+//11.REFRESH PAGE
+const refreshPage = () => {
+    location.reload();
 }

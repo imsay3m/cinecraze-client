@@ -1,4 +1,4 @@
-if (getUserToken) {
+if (user_token) {
     // User is authenticated, redirect to userDetails page
     window.location.href = "profile.html";
 }
@@ -89,22 +89,3 @@ const handleLogin = (event) => {
             });
     }
 };
-
-const handleLogout = () => {
-    loginRedirector()
-    const logout_api = 'https://cinecraze-server.onrender.com/user/logout/';
-    const token = localStorage.getItem('cinecraze_token')
-    fetch(logout_api, {
-        method: "GET",
-        authorization: `Token ${token}`,
-        headers: { "content-type": "application/json" },
-    })
-        .then(response => response.json())
-        .then(data => {
-            console.log(data)
-            localStorage.removeItem('cinecraze_token')
-            localStorage.removeItem('cinecraze_user_id')
-            localStorage.removeItem('cinecraze_user_type')
-            window.location.href = "index.html"; // Redirect to the home page after successful logout
-        })
-}

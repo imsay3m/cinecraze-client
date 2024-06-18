@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies And Series</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-sans bg-tertiary">
+    <!-- header start -->
+    <header>
+        <!-- navbar start -->
+        <nav class="w-80 lg:w-[1280px] mx-auto ">
+            <div class="py-5 flex justify-between items-center">
+                <div class="w-80 flex justify-between items-center">
+                    <a href="index.html" class="flex justify-start items-center">
+                        <img src="assets/images/navbar/cinecraze-logo.png" alt="">
+                        <span class="text-white font-bold text-2xl ml-1">CineCraze</span>
+                    </a>
+                    <ul onclick="toggleNavMenu()" class="block lg:hidden">
+                        <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary"
+                            id="hamburger-icon">
+                            <img src="assets/images/mobile/hamburger-btn.png" alt="">
+                        </li>
+                        <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary hidden"
+                            id="close-icon">
+                            <img src="assets/images/mobile/close-btn.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul
+                        class="hidden lg:flex gap-x-1 text-lg bg-seconderylite font-normal border-[3px]  border-secondery rounded-xl p-2 text-[#BFBFBF]">
+                        <a href="index.html">
+                            <li class="py-2 px-4 hover:rounded-lg hover:bg-primary hover:text-white">
+                                Home
+                            </li>
+                        </a>
+                        <a href="movies-and-shows.html">
+                            <li
+                                class="py-2 px-4 bg-secondery border border-[#262626] rounded-lg  hover:bg-primary hover:text-white">
+                                Movies &
+                                Shows
+                            </li>
+                        </a>
+                        <a href="cine-request.html">
+                            <li class="py-2 px-4 hover:rounded-lg  hover:text-white hover:bg-primary">
+                                Cine Request
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="py-2 px-4 hover:rounded-lg hover:bg-primary hover:text-white">
+                                Subscriptions
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="hidden lg:block">
+                    <ul class="">
+                        <div class="hidden gap-x-3" id="authenticated-user">
+                            <a href="">
+                                <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                    <img src="assets/images/navbar/search-icon.png" alt="">
+                                </li>
+                            </a>
+                            <a href="">
+                                <li class=" p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                    <img src="assets/images/navbar/notification-icon.png" alt="">
+                                </li>
+                            </a>
+                            <a href="profile.html">
+                                <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                    <img src="assets/images/navbar/profile.png" alt="">
+                                </li>
+                            </a>
+                            <button onclick="handleLogout()">
+                                <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                    <img src="assets/images/navbar/logout.png" alt="">
+                                </li>
+                            </button>
+                        </div>
+                        <div class="flex gap-x-3" id="unauthenticated-user">
+                            <a href="login.html">
+                                <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                    <img src="assets/images/navbar/login.png" alt="">
+                                </li>
+                            </a>
+                            <a href="signup.html">
+                                <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                    <img src="assets/images/navbar/sign-up.png" alt="">
+                                </li>
+                            </a>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <!-- mobile bar -->
+            <div class="hidden lg:hidden w-80 mx-auto mt-10" id="myLinks">
+                <ul class="flex flex-col gap-y-3 text-xl">
+                    <li class="hover:text-primary"><a href="index.html">Home</a></li>
+                    <li class="text-primary font-medium"><a href="movies-and-shows.html">Movies & Shows</a></li>
+                    <li class="hover:text-primary"><a href="cine-request.html">Cine Request</a></li>
+                    <li class="hover:text-primary"><a href="#">Subscriptions</a></li>
+                    <div>
+                        <div class="hidden gap-3" id="authenticated-user-mobile">
+                            <a href="">
+                                <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                    <img src="assets/images/navbar/search-icon.png" alt="">
+                                </li>
+                            </a>
+                            <a href="">
+                                <li class=" p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                    <img src="assets/images/navbar/notification-icon.png" alt="">
+                                </li>
+                            </a>
+                            <a href="profile.html">
+                                <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                    <img src="assets/images/navbar/profile.png" alt="">
+                                </li>
+                            </a>
+                            <button onclick="handleLogout()">
+                                <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                    <img src="assets/images/navbar/logout.png" alt="">
+                                </li>
+                            </button>
+                        </div>
+                        <div class="flex gap-3" id="unauthenticated-user-mobile">
+                            <a href="login.html">
+                                <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                    <img src="assets/images/navbar/login.png" alt="">
+                                </li>
+                            </a>
+                            <a href="signup.html">
+                                <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                    <img src="assets/images/navbar/sign-up.png" alt="">
+                                </li>
+                            </a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+        <!-- navbar end -->
+    </header>
+    <!-- header end -->
+    <!-- description section start -->
+    <section>
+        <div>
+            <div class="" id="profile-details-container">
+                <div class="w-80 lg:w-[1280px] mx-auto my-20 lg:my-25 flex flex-col items-start lg:flex-row gap-y-5 lg:gap-x-5"
+                    id="demo-details">
+                    <ul
+                        class="w-80 flex flex-col flex-wrap  justify-start items-center gap-2 text-lg bg-seconderylite font-normal border-[3px] border-secondery rounded-xl px-3 py-6 text-[#BFBFBF]">
+                        <button>
+                            <li
+                                class="py-2 px-4 bg-secondery border border-[#262626] rounded-lg  hover:bg-primary hover:text-white">
+                                Profile
+                            </li>
+                        </button>
+                        <button>
+                            <li class="py-2 px-4 hover:rounded-lg hover:bg-primary hover:text-white">
+                                Chnage Password
+                            </li>
+                        </button>
+                        <button>
+                            <li class="py-2 px-4 hover:rounded-lg hover:bg-primary hover:text-white">
+                                Update Subscription
+                            </li>
+                        </button>
+                        <button>
+                            <li class="py-2 px-4 hover:rounded-lg  hover:text-white hover:bg-primary">
+                                Watch Later
+                            </li>
+                        </button>
+                        <a href="index.html">
+                            <li class="py-2 px-4 hover:rounded-lg hover:bg-primary hover:text-white">
+                                Home
+                            </li>
+                        </a>
+                    </ul>
+                    <div class="w-80 lg:w-full flex flex-col gap-y-5">
+                        <section class="container mx-auto" id="profile-data">
+                        </section>
+                        <section class="hidden container mx-auto" id="demo-profile-data">
+                            <div class="bg-gray-100 bg-card-b p-10 rounded-[10px] flex flex-col gap-y-4 items-start">
+                                <div class="block" id="name-edit-icon">
+                                    <div class="flex flex-row justify-start items-center gap-x-4">
+                                        <h2 class="text-2xl lg:text-4xl font-medium font-roboto text-white">
+                                            John Doe
+                                        </h2>
+                                        <img onclick="editProfileToggle()"
+                                            class="p-2 border border-[#262626] bg-transparent rounded-md hover:bg-primary"
+                                            src="assets/images/profile/edit.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="hidden" id="name-save-icon">
+                                    <div class="flex flex-row justify-start items-center gap-x-1">
+                                        <input type="text" id="name-input"
+                                            class="hidden w-full p-2.5 bg-tertiary border border-[#262626] focus:border-[#262626] focus:outline-none focus:ring-0 focus:shadow-md focus:shadow-red-600 rounded-md"
+                                            placeholder="Enter Full Name" autocomplete="name" value="John Doe">
+                                        <img onclick="refreshPage()"
+                                            class="p-2.5 border border-[#262626] bg-transparent rounded-md hover:bg-primary"
+                                            src="assets/images/profile/cancel.png" alt="" id="name-edit-cancel-icon">
+                                        <img class="p-2.5 border border-[#262626] bg-transparent rounded-md hover:bg-primary"
+                                            src="assets/images/profile/check-mark.png" alt="">
+                                    </div>
+                                </div>
+                                <p class="text-lg lg:text-xl text-white font-roboto">john@doe.com</p>
+                                <button
+                                    class="text-white hover:text-primary px-4 py-3 bg-tertiary border border-[#262626] rounded-md">
+                                    Basic User
+                                </button>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- description section end -->
+    <!-- free trial section start -->
+    <section>
+        <div
+            class="w-80 lg:w-[1280px] text-center lg:text-left lg:flex lg:justify-between lg:items-center bg-free-trial-background-mobile lg:bg-free-trial-background bg-center bg-no-repeat lg:bg-cover mx-auto px-7.5 py-12.5 lg:px-15 lg:py-20 rounded-xl border border-[#262626] mb-20 lg:mb-40">
+            <div class="mb-12.5 lg:mb-0">
+                <h4 class="font-bold text-2xl lg:text-[28px] mb-2.5">Start your free trial today!</h4>
+                <p class="font-normal text-sm lg:text-base text-[#999999]">This is a clear and concise call to
+                    action
+                    that encourages users to sign up for a free trial of
+                    CineCraze.</p>
+            </div>
+            <a href="">
+                <button
+                    class="px-4 py-3 bg-primary text-center rounded-md hover:bg-tertiary hover:outline hover:outline-primary ">
+                    Start Free Trial
+                </button>
+            </a>
+        </div>
+    </section>
+    <!-- free trial section end -->
+    <!-- footer start  -->
+    <footer class=" bg-seconderylite">
+        <div class="w-80 lg:w-[1280px] mx-auto grid grid-cols-2 lg:grid-cols-6 lg:py-20 gap-y-7.5 py-12.5 ">
+            <ul class="text-[#999999] text-sm font-medium flex flex-col justify-start gap-y-2 ">
+                <li class="text-white text-base mb-4 ">
+                    <a class="hover:text-primary" href="index.html">Home</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Categories</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Devices</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Pricing</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">FAQ</a>
+                </li>
+            </ul>
+            <ul class="text-[#999999] text-sm font-medium flex flex-col justify-start gap-y-2">
+                <li class="text-white text-base mb-4">
+                    <a class="hover:text-primary" href="movies-and-shows.html">Movies</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Genres</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Trending</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">New Release</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Popular</a>
+                </li>
+            </ul>
+            <ul class="text-[#999999] text-sm font-medium flex flex-col justify-start gap-y-2">
+                <li class="text-white text-base mb-4">
+                    <a class="hover:text-primary" href="movies-and-shows.html">Shows</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Genres</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Trending</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">New Release</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Popular</a>
+                </li>
+            </ul>
+            <ul class="text-[#999999] text-sm font-medium flex flex-col justify-start gap-y-2">
+                <li class="text-white text-base mb-4">
+                    <a class="hover:text-primary" href="#">Support</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Contact US</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="cine-request.html">Cine Request</a>
+                </li>
+            </ul>
+            <ul class="text-[#999999] text-sm font-medium flex flex-col justify-start gap-y-2">
+                <li class="text-white text-base mb-4">
+                    <a class="hover:text-primary" href="#">Subscriptions</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Plans</a>
+                </li>
+                <li>
+                    <a class="hover:text-primary" href="#">Features</a>
+                </li>
+            </ul>
+            <ul class="text-[#999999] text-sm font-medium flex flex-col justify-start gap-y-2">
+                <li class="text-white text-base mb-4">
+                    Connect With Us
+                </li>
+                <div class="flex gap-x-2.5">
+                    <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                        <a href="">
+                            <img src="assets/images/footer/fb-icon.png" alt="">
+                        </a>
+                    </li>
+                    <li class=" p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                        <a href="">
+                            <img src="assets/images/footer/x-icon.png" alt="">
+                        </a>
+                    </li>
+                    <li class=" p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                        <a href="">
+                            <img src="assets/images/footer/linkedin-icon.png" alt="">
+                        </a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+        <div
+            class="w-80 lg:w-[1280px] mx-auto text-[#999999] text-sm font-medium border-t border-[#262626] lg:flex lg:justify-between lg:items-center">
+            <p class="my-5">
+                @2024 CineCraze, All Rights Reserved
+            </p>
+            <ul class="flex pb-5 lg:py-5">
+                <li class="border-r border-[#262626] pr-3">
+                    <a href="">
+                        Terms of Use
+                    </a>
+                </li>
+                <li class="border-r border-[#262626] px-3">
+                    <a href="">
+                        Privacy Policy
+                    </a>
+                </li>
+                <li class="pl-3">
+                    <a href="">
+                        Cookie Policy
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- footer end -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/profile.js"></script>
+    <!-- <script src="assets/js/movie_details.js"></script> -->
+</body>
+
+</html>
