@@ -33,6 +33,7 @@ module.exports = {
         'free-trial-background-mobile': "url('assets/images/mobile/free-trial-background.png')",
         'movie-backdrop-background': "url('assets/images/laptop/eternals-original-backdrop.jpg')",
         'movie-poster-background': "url('assets/images/mobile/eternals-original-poster.png')",
+        'profile-background': "url('assets/images/profile/profile-banner.jpg')",
       },
       lineHeight: {
         '14': '3.5rem',

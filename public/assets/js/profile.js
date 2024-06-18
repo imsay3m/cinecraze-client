@@ -32,7 +32,7 @@ const handleProfileData = () => {
             const user_type = (data.user_type).toUpperCase();
             const parent_div = document.getElementById("profile-data");
             const child_div = document.createElement("div");
-            child_div.classList.add('bg-gray-100', 'bg-card-b', 'p-10', 'rounded-[10px]', 'flex', 'flex-col', 'gap-y-4', 'items-start');
+            child_div.classList.add('bg-gray-100', 'bg-profile-background', 'bg-cover', 'bg-cover', 'p-10', 'rounded-[10px]', 'flex', 'flex-col', 'gap-y-4', 'items-start');
             child_div.innerHTML =
                 `
             <div class="block" id="name-edit-icon">
