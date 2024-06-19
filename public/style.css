@@ -3154,6 +3154,10 @@ select {
     height: 23.125rem;
   }
 
+  .lg\:w-1\/2 {
+    width: 50%;
+  }
+
   .lg\:w-103\.25 {
     width: 25.8125rem;
   }
@@ -3240,6 +3244,10 @@ select {
 
   .lg\:justify-between {
     justify-content: space-between;
+  }
+
+  .lg\:gap-6 {
+    gap: 1.5rem;
   }
 
   .lg\:gap-x-1 {

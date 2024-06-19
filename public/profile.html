@@ -42,14 +42,13 @@
                             </li>
                         </a>
                         <a href="movies-and-shows.html">
-                            <li
-                                class="py-2 px-4 bg-secondery border border-[#262626] rounded-lg  hover:bg-primary hover:text-white">
+                            <li class="py-2 px-4 hover:rounded-lg  hover:bg-primary hover:text-white">
                                 Movies &
                                 Shows
                             </li>
                         </a>
                         <a href="cine-request.html">
-                            <li class="py-2 px-4 hover:rounded-lg  hover:text-white hover:bg-primary">
+                            <li class="py-2 px-4 hover:rounded-lg hover:bg-primary hover:text-white">
                                 Cine Request
                             </li>
                         </a>
@@ -74,7 +73,7 @@
                                 </li>
                             </a>
                             <a href="profile.html">
-                                <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                <li class="p-3 border border-[#262626] bg-tertiary rounded-md hover:bg-primary">
                                     <img src="assets/images/navbar/profile.png" alt="">
                                 </li>
                             </a>
@@ -103,7 +102,7 @@
             <div class="hidden lg:hidden w-80 mx-auto mt-10" id="myLinks">
                 <ul class="flex flex-col gap-y-3 text-xl">
                     <li class="hover:text-primary"><a href="index.html">Home</a></li>
-                    <li class="text-primary font-medium"><a href="movies-and-shows.html">Movies & Shows</a></li>
+                    <li class="hover:text-primary"><a href="movies-and-shows.html">Movies & Shows</a></li>
                     <li class="hover:text-primary"><a href="cine-request.html">Cine Request</a></li>
                     <li class="hover:text-primary"><a href="#">Subscriptions</a></li>
                     <div>
@@ -119,7 +118,7 @@
                                 </li>
                             </a>
                             <a href="profile.html">
-                                <li class="p-3 border border-[#262626] bg-secondery rounded-md hover:bg-primary">
+                                <li class="p-3 border border-[#262626] bg-tertiary rounded-md hover:bg-primary">
                                     <img src="assets/images/navbar/profile.png" alt="">
                                 </li>
                             </a>
@@ -156,14 +155,20 @@
                     id="demo-details">
                     <ul
                         class="w-80 flex flex-col flex-wrap  justify-start items-center gap-2 text-lg bg-seconderylite font-normal border-[3px] border-secondery rounded-xl px-3 py-6 text-[#BFBFBF]">
-                        <button>
-                            <li
-                                class="py-2 px-4 bg-secondery border border-[#262626] rounded-lg  hover:bg-primary hover:text-white">
+                        <a href="admin.html" class="hidden" id="sidebar-admin-panel-btn">
+                            <li class="py-2 px-4 hover:rounded-lg  hover:bg-primary hover:text-white">
+                                Admin Panel
+                            </li>
+                        </a>
+                        <a href="profile.html">
+                            <li class="py-2 px-4 bg-secondery border border-[#262626] rounded-lg hover:rounded-lg  hover:bg-primary hover:text-white"
+                                id="sidebar-profile-btn">
                                 Profile
                             </li>
-                        </button>
-                        <button>
-                            <li class="py-2 px-4 hover:rounded-lg hover:bg-primary hover:text-white">
+                        </a>
+                        <button onclick="changePasswordToggle()">
+                            <li class="py-2 px-4 hover:rounded-lg hover:bg-primary hover:text-white"
+                                id="sidebar-change-password-btn">
                                 Chnage Password
                             </li>
                         </button>
@@ -184,9 +189,9 @@
                         </a>
                     </ul>
                     <div class="w-80 lg:w-full flex flex-col gap-y-5">
-                        <section class="container mx-auto" id="profile-data">
+                        <section class="container mx-auto" id="profile-data-container">
                         </section>
-                        <section class="hidden container mx-auto" id="demo-profile-data">
+                        <section class="hidden container mx-auto" id="demo-profile-data-container">
                             <div
                                 class="bg-gray-100 bg-profile-background bg-cover p-10 rounded-[10px] flex flex-col gap-y-4 items-start">
                                 <div class="block" id="name-edit-icon">
@@ -200,22 +205,92 @@
                                     </div>
                                 </div>
                                 <div class="hidden" id="name-save-icon">
-                                    <div class="flex flex-row justify-start items-center gap-x-1">
+                                    <form method="post" class="flex flex-row justify-start items-center gap-x-1">
                                         <input type="text" id="name-input"
                                             class="hidden w-full p-2.5 bg-tertiary border border-[#262626] focus:border-[#262626] focus:outline-none focus:ring-0 focus:shadow-md focus:shadow-red-600 rounded-md"
                                             placeholder="Enter Full Name" autocomplete="name" value="John Doe">
                                         <img onclick="refreshPage()"
                                             class="p-2.5 border border-[#262626] bg-transparent rounded-md hover:bg-primary"
                                             src="assets/images/profile/cancel.png" alt="" id="name-edit-cancel-icon">
-                                        <img class="p-2.5 border border-[#262626] bg-transparent rounded-md hover:bg-primary"
+                                        <img onclick="handleSaveName(event)"
+                                            class="p-2.5 border border-[#262626] bg-transparent rounded-md hover:bg-primary"
                                             src="assets/images/profile/check-mark.png" alt="">
-                                    </div>
+                                    </form>
                                 </div>
                                 <p class="text-lg lg:text-xl text-white font-roboto">john@doe.com</p>
                                 <button
                                     class="text-white hover:text-primary px-4 py-3 bg-tertiary border border-[#262626] rounded-md">
                                     Basic User
                                 </button>
+                            </div>
+                        </section>
+                        <section class="hidden" id="change-password-container">
+                            <div
+                                class="lg:w-full lg:bg-seconderylite p-6 lg:p-10 rounded-[10px] border border-[#262626]">
+                                <form method="post">
+                                    <div class="grid lg:grid-cols-1 gap-y-5 lg:gap-y-6">
+                                        <h3 class="text-center font-bold text-white text-[28px] lg:text-[38px] mb-2">
+                                            Change Password Now!</h3>
+                                        <div class="mb-2">
+                                            <div role="alert" class="hidden alert alert-warning mb-2.5"
+                                                id="alert-container">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    class="stroke-current shrink-0 h-6 w-6" fill="none"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                                </svg>
+                                                <span class="font-medium text-lg hover:text-primary">Alert
+                                                    Message</span>
+                                            </div>
+                                            <div role="alert" class="hidden alert alert-success mb-2.5"
+                                                id="success-container">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    class="stroke-current shrink-0 h-6 w-6" fill="none"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg>
+                                                <span class="font-medium text-lg hover:text-primary">Success
+                                                    Message</span>
+                                            </div>
+                                        </div>
+                                        <div class="w-full">
+                                            <label for="old-password"
+                                                class="block text-white text-base font-semibold mb-3">Old
+                                                Password</label>
+                                            <input type="password" id="old-password"
+                                                class="w-full p-4 bg-tertiary border border-[#262626] focus:border-[#262626] focus:outline-none focus:ring-0 focus:shadow-md focus:shadow-red-600 rounded-md"
+                                                placeholder="Enter your Old Password" autocomplete="current-password">
+                                        </div>
+                                        <div class="w-full flex flex-col lg:flex-row gap-5 lg:gap-6">
+                                            <div class="lg:w-1/2">
+                                                <label for="new-password"
+                                                    class="block text-white text-base font-semibold mb-3">
+                                                    New Password
+                                                </label>
+                                                <input type="password" id="new-password"
+                                                    class="w-full p-4 bg-tertiary border border-[#262626] focus:border-[#262626] focus:outline-none focus:ring-0 focus:shadow-md focus:shadow-red-600 rounded-md"
+                                                    placeholder="Enter New Password" autocomplete="new-password">
+                                            </div>
+                                            <div class="lg:w-1/2">
+                                                <label for="confirm-password"
+                                                    class="block text-white text-base font-semibold mb-3">
+                                                    Confirm Password
+                                                </label>
+                                                <input type="password" id="confirm-password"
+                                                    class="w-full p-4 bg-tertiary border border-[#262626] focus:border-[#262626] focus:outline-none focus:ring-0 focus:shadow-md focus:shadow-red-600 rounded-md"
+                                                    placeholder="Confirm Password" autocomplete="new-password">
+                                            </div>
+                                        </div>
+                                        <button type="submit" onclick="handleChangePassword(event)"
+                                            class="mb-6 px-4 py-3 bg-primary text-center rounded-md hover:bg-tertiary hover:outline hover:outline-primary text-lg font-semibold">
+                                            Submit
+                                        </button>
+                                    </div>
+                                </form>
                             </div>
                         </section>
                     </div>
