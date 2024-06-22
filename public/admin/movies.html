@@ -15,13 +15,12 @@
         <div class="drawer-content flex flex-col mx-auto mt-5">
             <header>
                 <!-- navbar start -->
-                <div class="w-80 lg:w-[1280px] navbar bg-base-300 rounded-box">
+                <div class="w-80 lg:w-[1280px] mx-auto navbar bg-base-300 rounded-box">
                     <div class="flex-none lg:hidden">
                         <label for="my-drawer-3" aria-label="open sidebar" class="btn btn-square btn-ghost">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 class="inline-block w-6 h-6 stroke-current">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h16M4 18h16">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
                                 </path>
                             </svg>
                         </label>
@@ -32,8 +31,7 @@
                             <!-- Navbar menu content here -->
                             <div class="dropdown dropdown-end">
                                 <div tabindex="0" role="button" class="btn btn-ghost rounded-btn">User</div>
-                                <ul tabindex="0"
-                                    class="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4">
+                                <ul tabindex="0" class="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4">
                                     <li><a href="users.html">User List</a></li>
                                     <li><a href="users.html">Add User</a></li>
                                 </ul>
@@ -41,10 +39,9 @@
                             <div class="dropdown dropdown-end">
                                 <div tabindex="0" role="button" class="btn btn-ghost rounded-btn">Movies
                                 </div>
-                                <ul tabindex="0"
-                                    class="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4">
+                                <ul tabindex="0" class="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4">
                                     <li><a href="movies.html">Movies List</a></li>
-                                    <li><a href="movies.html">Add Movies</a></li>
+                                    <li><a href="add-movies.html">Add Movies</a></li>
                                 </ul>
                             </div>
                             <li><a class="btn btn-ghost rounded-btn" href="cine-requests.html">Cine Request</a></li>
@@ -56,7 +53,7 @@
             <!-- Page content here -->
             <main>
                 <div class="my-8">
-                    <div class="flex flex-row justify-between items-center">
+                    <div class="flex flex-col lg:flex-row justify-between items-center">
                         <div class="my-4 flex border-2 border-blue-500 overflow-hidden max-w-md">
                             <input id="movie-search" type="text" placeholder="Search Movie Title..."
                                 class="w-full outline-none bg-white text-gray-600 text-sm px-4 py-3" />

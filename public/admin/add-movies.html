@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div class="drawer">
+        <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content flex flex-col mx-auto mt-5">
+            <header>
+                <!-- navbar start -->
+                <div class="w-80 lg:w-[1280px] mx-auto navbar bg-base-300 rounded-box">
+                    <div class="flex-none lg:hidden">
+                        <label for="my-drawer-3" aria-label="open sidebar" class="btn btn-square btn-ghost">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                class="inline-block w-6 h-6 stroke-current">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16">
+                                </path>
+                            </svg>
+                        </label>
+                    </div>
+                    <div class="flex-1 px-2 mx-2"><a href="index.html">Admin Dashboard</a></div>
+                    <div class="flex-none hidden lg:block">
+                        <ul class="menu menu-horizontal items-center">
+                            <!-- Navbar menu content here -->
+                            <div class="dropdown dropdown-end">
+                                <div tabindex="0" role="button" class="btn btn-ghost rounded-btn">User</div>
+                                <ul tabindex="0"
+                                    class="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4">
+                                    <li><a href="users.html">User List</a></li>
+                                    <li><a href="users.html">Add User</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown dropdown-end">
+                                <div tabindex="0" role="button" class="btn btn-ghost rounded-btn">Movies
+                                </div>
+                                <ul tabindex="0"
+                                    class="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4">
+                                    <li><a href="movies.html">Movies List</a></li>
+                                    <li><a href="add-movies.html">Add Movies</a></li>
+                                </ul>
+                            </div>
+                            <li><a class="btn btn-ghost rounded-btn" href="cine-requests.html">Cine Request</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- navbar end -->
+            </header>
+            <!-- Page content here -->
+            <main>
+                <div class="my-10">
+                    <div class="w-80 lg:w-[1280px] mx-auto p-8 bg-gray-800 rounded-md shadow-md form-container">
+                        <h2 class="text-2xl font-semibold text-white mb-6">Add Movie!</h2>
+                        <form method="POST">
+                            <div class="flex flex-col lg:flex-row gap-3">
+                                <div class="lg:w-1/2">
+                                    <label for="tmdb-id" class="block text-gray-300 text-sm font-bold mb-2">TMDB
+                                        ID</label>
+                                    <input type="text" id="tmdb-id" name="tmdb-id" placeholder="134633" required
+                                        class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-gray-700 text-white">
+                                </div>
+                                <div class="lg:w-1/2">
+                                    <label class="block text-gray-300 text-sm font-bold mb-2">Targeted
+                                        User</label>
+                                    <div class="flex flex-col lg:flex-row gap-4  justify-start items-start">
+                                        <label for="premium-user"
+                                            class="flex cursor-pointer items-start gap-4 rounded-lg border border-gray-200 p-2 transition hover:bg-gray-50 has-[:checked]:bg-blue-50 dark:border-gray-700 dark:hover:bg-gray-900 dark:has-[:checked]:bg-gray-700">
+                                            <div class="flex items-center">
+                                                &#8203;
+                                                <input type="checkbox"
+                                                    class="size-4 rounded border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:ring-offset-gray-900"
+                                                    id="premium-user" />
+                                            </div>
+                                            <div>
+                                                <strong class="font-normal text-gray-900 dark:text-white"> Premium User
+                                                </strong>
+                                            </div>
+                                        </label>
+                                        <label for="standard-user"
+                                            class="flex cursor-pointer items-start gap-4 rounded-lg border border-gray-200 p-2 transition hover:bg-gray-50 has-[:checked]:bg-blue-50 dark:border-gray-700 dark:hover:bg-gray-900 dark:has-[:checked]:bg-gray-700">
+                                            <div class="flex items-center">
+                                                &#8203;
+                                                <input type="checkbox"
+                                                    class="size-4 rounded border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:ring-offset-gray-900"
+                                                    id="standard-user" />
+                                            </div>
+                                            <div>
+                                                <strong class="font-normal text-gray-900 dark:text-white"> Standard User
+                                                </strong>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="my-4">
+                                <label for="download_urls" class="block text-gray-300 text-sm font-bold mb-2">Download
+                                    URLS</label>
+                                <textarea id="download_urls" name="download_urls" rows="5" required
+                                    class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-gray-700 text-white">
+{
+    "download_url": "http://example.com/720p_movie.mp4",
+    "quality": "720p",
+    "language": "English",
+    "size":"1.4gb"
+},
+{
+    "download_url": "http://example.com/1080p_movie.mp4",
+    "quality": "1080p",
+    "language": "English-Hindi-Telegu",
+    "size":"2.6GB"
+}
+                                </textarea>
+                            </div>
+                            <div class="my-4">
+                                <label for="streaming_urls" class="block text-gray-300 text-sm font-bold mb-2">Streaming
+                                    URLS</label>
+                                <textarea id="streaming_urls" name="streaming_urls" rows="5" required
+                                    class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-gray-700 text-white">
+{
+    "streaming_url": "http://example.com/720p_movie.mp4",
+    "language": "English",
+},
+{
+    "streaming_url": "http://example.com/1080p_movie.mp4",
+    "language": "Hindi",
+}
+                                </textarea>
+                            </div>
+                            <button type="submit"
+                                class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue">
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <!-- sidebar start -->
+        <div class="drawer-side">
+            <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label>
+            <ul class="menu p-4 w-80 min-h-full bg-base-200 items-start">
+                <!-- Sidebar content here -->
+                <div class="dropdown dropdown-bottom">
+                    <div tabindex="0" role="button" class="btn m-1">User</div>
+                    <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a href="users.html">User List</a></li>
+                        <li><a href="users.html">Add User</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown dropdown-bottom">
+                    <div tabindex="0" role="button" class="btn m-1">Movies</div>
+                    <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a href="add-movies.html">Add Movies</a></li>
+                        <li><a href="movies.html">Movies List</a></li>
+                    </ul>
+                </div>
+                <li><a class="btn text-left" href="cine-requests.html">Cine Request</a></li>
+            </ul>
+        </div>
+        <!-- sidebar end -->
+    </div>
+</body>
+
+</html>
