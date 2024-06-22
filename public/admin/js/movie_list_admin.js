@@ -57,7 +57,7 @@ const loadMovies = (search = null) => {
                         </td>
                         <td>
                             <button class="btn btn-warning btn-xs">EDIT</button>
-                            <button class="btn btn-error btn-xs">DELETE</button>
+                            <button onclick="handleDeleteMovie(event,${tmdb_id})" class="btn btn-error btn-xs">DELETE</button>
                         </td>
                         `
 
