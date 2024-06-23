@@ -34,7 +34,9 @@ const loadMovies = (search = null) => {
                         <td>
                             <div class="flex flex-wrap items-center  gap-3">
                                 <div class="avatar w-20">
+                                <a href="https://cinecraze-client.vercel.app/movie-details.html?tmdb_id=${tmdb_id}" target="_blank" rel="noopener noreferrer">
                                     <img src=${poster_url} alt="${title}" />
+                                </a>
                                 </div>
                                 <div class="text-left">
                                     <div class="font-bold">${title}</div>
@@ -56,7 +58,7 @@ const loadMovies = (search = null) => {
                             </div>
                         </td>
                         <td>
-                            <button class="btn btn-warning btn-xs">EDIT</button>
+                            <a href="update-movies.html?tmdb_id=${tmdb_id}" class="btn btn-warning btn-xs">EDIT</a>
                             <button onclick="handleDeleteMovie(event,${tmdb_id})" class="btn btn-error btn-xs">DELETE</button>
                         </td>
                         `

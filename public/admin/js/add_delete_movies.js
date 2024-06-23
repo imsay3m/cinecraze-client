@@ -30,7 +30,10 @@ const handleAddMovie = (event) => {
                 .then(res => {
                     res.json()
                     if (res.status == 201) {
-                        window.location.href = "movies.html"
+                        showSuccess("Successfully added the movie into the library.");
+                        setTimeout(() => {
+                            window.location.href = "movies.html"
+                        }, 4000);
                     }
                     else {
                         showAlert("Something went wrong. Please Check The TMDB ID.")
@@ -63,7 +66,13 @@ const handleDeleteMovie = (event, id) => {
         .then(response => {
             if (response.status == 200) {
                 console.log('Movie deleted successfully');
-                window.location.href = "movies.html"
+                response.json().then(data => {
+                    showSuccess(data.message);
+                    console.log('message:', data.message);
+                });
+                setTimeout(() => {
+                    window.location.href = "movies.html"
+                }, 4000);
             } else {
                 response.json().then(data => {
                     showAlert("Something went wrong. Please try again later.");
