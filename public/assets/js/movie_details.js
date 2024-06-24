@@ -45,7 +45,7 @@ const movieDetails = () => {
             demo_details.innerHTML = ''
             const downloadUrls = element.download_urls.map(key => `
                 <tr>
-                    <td class="text-primary"><a href=${key.download_url} onclick="window.open(this.href, '_blank'); return false;">Download</a></td>
+                    <td class="text-primary"><a href=${key.download_url}>Download</a></td>
                     <td><button class="text-left text-white px-2 py-1.5 bg-tertiary border border-[#262626] rounded-md">${key.quality}</button></td>
                     <td>${key.language}</td>
                     <td>${key.size}</td>
