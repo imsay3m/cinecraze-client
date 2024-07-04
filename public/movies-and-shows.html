@@ -195,78 +195,36 @@
                 Movies
             </button>
             <!-- new release section start -->
-            <div class="my-8 lg:mb-14">
+            <div class="my-8 lg:mb-14" id="new-released-movies-section">
                 <div class="flex justify-between items-center">
                     <h3 class="font-semibold text-xl lg:text-3xl">New Releases</h3>
-                    <a href="">
+                    <a href="new-released-movies.html">
                         <button
                             class="px-4 py-2 bg-primary font-medium text-center rounded-md hover:bg-tertiary hover:outline hover:outline-primary ">
                             See All
                         </button>
                     </a>
                 </div>
-                <div class="my-5 grid grid-cols-2 lg:grid-cols-5 items-center gap-5 mx-auto">
-                    <div class="p-3 lg:p-4 flex flex-col gap-y-2 lg:gap-y-4 rounded-[10px] bg-secondery mx-auto">
-                        <img class="w-[128px] lg:w-[200px] rounded-[10px]"
-                            src="assets/images/mobile/morbius-original-poster.jpg" alt="">
+                <div class="my-5 grid grid-cols-2 lg:grid-cols-5 items-center gap-5 mx-auto"
+                    id="new-released-movies-container">
+                    <div class="hidden p-3 lg:p-4  flex-col gap-y-2 lg:gap-y-4 rounded-[10px] bg-secondery mx-auto">
+                        <a href="#">
+                            <img class="w-[128px] lg:w-[200px] rounded-[10px]"
+                                src="assets/images/mobile/morbius-original-poster.jpg" alt="">
+                        </a>
                         <div class="flex flex-col gap-y-1">
-                            <h5 class="font-medium text-base">Morbious</h5>
-                            <div class="flex gap-x-2 justify-start items-center text-[#999999] text-sm font-light">
-                                <div class="flex gap-x-2 justify-start items-center ">
-                                    <img src="assets/images/movie-details/year-icon.png" alt="">
-                                    <p>2023</p>
-                                </div>
+                            <div class="tooltip" data-tip="Lorem ipsum dolor sit amet
+                                                        consectetur adipisicing elit. Voluptatum, praesentium.">
+                                <h5 class="text-left font-medium text-sm lg:text-base line-clamp-1">
+                                    <a href="#">Lorem ipsum dolor
+                                        sit amet
+                                        consectetur adipisicing elit. Voluptatum, praesentium.</a>
+                                </h5>
                             </div>
-                        </div>
-                    </div>
-                    <div class="p-3 lg:p-4 flex flex-col gap-y-2 lg:gap-y-4 rounded-[10px] bg-secondery mx-auto">
-                        <img class="w-[128px] lg:w-[200px] rounded-[10px]"
-                            src="assets/images/mobile/morbius-original-poster.jpg" alt="">
-                        <div class="flex flex-col gap-y-1">
-                            <h5 class="font-medium text-base">Morbious</h5>
                             <div class="flex gap-x-2 justify-start items-center text-[#999999] text-sm font-light">
                                 <div class="flex gap-x-2 justify-start items-center ">
                                     <img src="assets/images/movie-details/year-icon.png" alt="">
-                                    <p>2023</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-3 lg:p-4 flex flex-col gap-y-2 lg:gap-y-4 rounded-[10px] bg-secondery mx-auto">
-                        <img class="w-[128px] lg:w-[200px] rounded-[10px]"
-                            src="assets/images/mobile/morbius-original-poster.jpg" alt="">
-                        <div class="flex flex-col gap-y-1">
-                            <h5 class="font-medium text-base">Morbious</h5>
-                            <div class="flex gap-x-2 justify-start items-center text-[#999999] text-sm font-light">
-                                <div class="flex gap-x-2 justify-start items-center ">
-                                    <img src="assets/images/movie-details/year-icon.png" alt="">
-                                    <p>2023</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-3 lg:p-4 flex flex-col gap-y-2 lg:gap-y-4 rounded-[10px] bg-secondery mx-auto">
-                        <img class="w-[128px] lg:w-[200px] rounded-[10px]"
-                            src="assets/images/mobile/morbius-original-poster.jpg" alt="">
-                        <div class="flex flex-col gap-y-1">
-                            <h5 class="font-medium text-base">Morbious</h5>
-                            <div class="flex gap-x-2 justify-start items-center text-[#999999] text-sm font-light">
-                                <div class="flex gap-x-2 justify-start items-center ">
-                                    <img src="assets/images/movie-details/year-icon.png" alt="">
-                                    <p>2023</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-3 lg:p-4 flex flex-col gap-y-2 lg:gap-y-4 rounded-[10px] bg-secondery mx-auto">
-                        <img class="w-[128px] lg:w-[192px] rounded-[10px]"
-                            src="assets/images/mobile/morbius-original-poster.jpg" alt="">
-                        <div class="flex flex-col gap-y-1">
-                            <h5 class="font-medium text-base">Morbious</h5>
-                            <div class="flex gap-x-2 justify-start items-center text-[#999999] text-sm font-light">
-                                <div class="flex gap-x-2 justify-start items-center ">
-                                    <img src="assets/images/movie-details/year-icon.png" alt="">
-                                    <p>2023</p>
+                                    <p class="text-xs lg:text-sm">2023</p>
                                 </div>
                             </div>
                         </div>
@@ -276,78 +234,36 @@
             </div>
             <!-- new release section end -->
             <!-- upcoming movie section start -->
-            <div class="mb-8 lg:mb-14">
+            <div class="mb-8 lg:mb-14" id="upcoming-movies-section">
                 <div class="flex justify-between items-center">
                     <h3 class="font-semibold text-xl lg:text-3xl">Upcoming Movies</h3>
-                    <a href="">
+                    <a href="upcoming-movies.html">
                         <button
                             class="px-4 py-2 bg-primary font-medium text-center rounded-md hover:bg-tertiary hover:outline hover:outline-primary ">
                             See All
                         </button>
                     </a>
                 </div>
-                <div class="my-5 grid grid-cols-2 lg:grid-cols-5 items-center gap-5 mx-auto">
-                    <div class="p-3 lg:p-4 flex flex-col gap-y-2 lg:gap-y-4 rounded-[10px] bg-secondery mx-auto">
-                        <img class="w-[128px] lg:w-[200px] rounded-[10px]"
-                            src="assets/images/mobile/morbius-original-poster.jpg" alt="">
+                <div class="my-5 grid grid-cols-2 lg:grid-cols-5 items-center gap-5 mx-auto"
+                    id="upcoming-movies-container">
+                    <div class="hidden p-3 lg:p-4  flex-col gap-y-2 lg:gap-y-4 rounded-[10px] bg-secondery mx-auto">
+                        <a href="#">
+                            <img class="w-[128px] lg:w-[200px] rounded-[10px]"
+                                src="assets/images/mobile/morbius-original-poster.jpg" alt="">
+                        </a>
                         <div class="flex flex-col gap-y-1">
-                            <h5 class="font-medium text-base">Morbious</h5>
-                            <div class="flex gap-x-2 justify-start items-center text-[#999999] text-sm font-light">
-                                <div class="flex gap-x-2 justify-start items-center ">
-                                    <img src="assets/images/movie-details/year-icon.png" alt="">
-                                    <p>2023</p>
-                                </div>
+                            <div class="tooltip" data-tip="Lorem ipsum dolor sit amet
+                                                        consectetur adipisicing elit. Voluptatum, praesentium.">
+                                <h5 class="text-left font-medium text-sm lg:text-base line-clamp-1">
+                                    <a href="#">Lorem ipsum dolor
+                                        sit amet
+                                        consectetur adipisicing elit. Voluptatum, praesentium.</a>
+                                </h5>
                             </div>
-                        </div>
-                    </div>
-                    <div class="p-3 lg:p-4 flex flex-col gap-y-2 lg:gap-y-4 rounded-[10px] bg-secondery mx-auto">
-                        <img class="w-[128px] lg:w-[200px] rounded-[10px]"
-                            src="assets/images/mobile/morbius-original-poster.jpg" alt="">
-                        <div class="flex flex-col gap-y-1">
-                            <h5 class="font-medium text-base">Morbious</h5>
                             <div class="flex gap-x-2 justify-start items-center text-[#999999] text-sm font-light">
                                 <div class="flex gap-x-2 justify-start items-center ">
                                     <img src="assets/images/movie-details/year-icon.png" alt="">
-                                    <p>2023</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-3 lg:p-4 flex flex-col gap-y-2 lg:gap-y-4 rounded-[10px] bg-secondery mx-auto">
-                        <img class="w-[128px] lg:w-[200px] rounded-[10px]"
-                            src="assets/images/mobile/morbius-original-poster.jpg" alt="">
-                        <div class="flex flex-col gap-y-1">
-                            <h5 class="font-medium text-base">Morbious</h5>
-                            <div class="flex gap-x-2 justify-start items-center text-[#999999] text-sm font-light">
-                                <div class="flex gap-x-2 justify-start items-center ">
-                                    <img src="assets/images/movie-details/year-icon.png" alt="">
-                                    <p>2023</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-3 lg:p-4 flex flex-col gap-y-2 lg:gap-y-4 rounded-[10px] bg-secondery mx-auto">
-                        <img class="w-[128px] lg:w-[200px] rounded-[10px]"
-                            src="assets/images/mobile/morbius-original-poster.jpg" alt="">
-                        <div class="flex flex-col gap-y-1">
-                            <h5 class="font-medium text-base">Morbious</h5>
-                            <div class="flex gap-x-2 justify-start items-center text-[#999999] text-sm font-light">
-                                <div class="flex gap-x-2 justify-start items-center ">
-                                    <img src="assets/images/movie-details/year-icon.png" alt="">
-                                    <p>2023</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-3 lg:p-4 flex flex-col gap-y-2 lg:gap-y-4 rounded-[10px] bg-secondery mx-auto">
-                        <img class="w-[128px] lg:w-[200px] rounded-[10px]"
-                            src="assets/images/mobile/morbius-original-poster.jpg" alt="">
-                        <div class="flex flex-col gap-y-1">
-                            <h5 class="font-medium text-base">Morbious</h5>
-                            <div class="flex gap-x-2 justify-start items-center text-[#999999] text-sm font-light">
-                                <div class="flex gap-x-2 justify-start items-center ">
-                                    <img src="assets/images/movie-details/year-icon.png" alt="">
-                                    <p>2023</p>
+                                    <p class="text-xs lg:text-sm">2023</p>
                                 </div>
                             </div>
                         </div>
@@ -360,7 +276,7 @@
             <div class="mb-8 lg:mb-14">
                 <div class="flex justify-between items-center">
                     <h3 class="font-semibold text-xl lg:text-3xl">Newly Added Movies</h3>
-                    <a href="">
+                    <a href="all-movies.html">
                         <button
                             class="px-4 py-2 bg-primary font-medium text-center rounded-md hover:bg-tertiary hover:outline hover:outline-primary ">
                             See All

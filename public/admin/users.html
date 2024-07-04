@@ -30,14 +30,7 @@
                     <div class="flex-none hidden lg:block">
                         <ul class="menu menu-horizontal items-center">
                             <!-- Navbar menu content here -->
-                            <div class="dropdown dropdown-end">
-                                <div tabindex="0" role="button" class="btn btn-ghost rounded-btn">User</div>
-                                <ul tabindex="0"
-                                    class="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4">
-                                    <li><a href="users.html">User List</a></li>
-                                    <li><a href="users.html">Add User</a></li>
-                                </ul>
-                            </div>
+                            <li><a class="btn btn-ghost rounded-btn" href="users.html">Users</a></li>
                             <div class="dropdown dropdown-end">
                                 <div tabindex="0" role="button" class="btn btn-ghost rounded-btn">Movies
                                 </div>
@@ -56,7 +49,85 @@
             <!-- Page content here -->
             <main>
                 <div class="my-10">
-                    Main Content
+                    <div class="block" id="movie-list-card">
+                        <div class="mb-2">
+                            <div role="alert" class="hidden alert alert-warning mb-2.5" id="alert-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6"
+                                    fill="none" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                </svg>
+                                <span class="font-medium text-lg hover:text-primary">Alert Message</span>
+                            </div>
+                            <div role="alert" class="hidden alert alert-success mb-2.5" id="success-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6"
+                                    fill="none" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="font-medium text-lg hover:text-primary">Success Message</span>
+                            </div>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="table table-zebra text-center">
+                                <!-- head -->
+                                <thead>
+                                    <tr>
+                                        <th>USER ID</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>User Type</th>
+                                        <th>Chnage User Type</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="movie-list-container">
+                                    <!-- row 1 -->
+                                    <tr class="" id="demo-movie-card">
+                                        <td>123123</td>
+                                        <td>
+                                            John Doe
+                                        </td>
+                                        <td>
+                                            john@doe.com
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-info btn-xs">Admin</button>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-warning btn-xs">Make Admin</button>
+                                            <button class="btn btn-success btn-xs">Make Premium</button>
+                                            <button class="btn btn-neutral btn-xs">Make Basic</button>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-error btn-xs">Delete</button>
+                                        </td>
+                                    </tr>
+                                    <!-- row 2 -->
+                                    <tr class="" id="demo-movie-card">
+                                        <td>123123</td>
+                                        <td>
+                                            John Doe
+                                        </td>
+                                        <td>
+                                            john@doe.com
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-info btn-xs">Admin</button>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-warning btn-xs">Make Admin</button>
+                                            <button class="btn btn-success btn-xs">Make Premium</button>
+                                            <button class="btn btn-neutral btn-xs">Make Basic</button>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-error btn-xs">Delete</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </main>
         </div>
@@ -65,13 +136,7 @@
             <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label>
             <ul class="menu p-4 w-80 min-h-full bg-base-200 items-start">
                 <!-- Sidebar content here -->
-                <div class="dropdown dropdown-bottom">
-                    <div tabindex="0" role="button" class="btn m-1">User</div>
-                    <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a href="users.html">User List</a></li>
-                        <li><a href="users.html">Add User</a></li>
-                    </ul>
-                </div>
+                <li><a class="btn text-left" href="users.html">Users</a></li>
                 <div class="dropdown dropdown-bottom">
                     <div tabindex="0" role="button" class="btn m-1">Movies</div>
                     <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
