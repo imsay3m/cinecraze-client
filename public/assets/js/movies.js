@@ -46,7 +46,7 @@ const upcomingMovies = () => {
     })
         .then(response => response.json())
         .then(data => {
-            console.log(data)
+            // console.log(data)
             const parent_div = document.querySelector('#upcoming-movies-container');
             if (data.length === 0) {
                 const section = document.getElementById('upcoming-movies-section')
@@ -85,7 +85,6 @@ const upcomingMovies = () => {
             console.error("Error while fetching movies from api:", error);
         });
 }
-
 const newReleasedMovies = () => {
     const new_released_movies_api = 'https://cinecraze-server.onrender.com/api/movies/?new_release=true';
     fetch(new_released_movies_api, {
@@ -94,7 +93,7 @@ const newReleasedMovies = () => {
     })
         .then(response => response.json())
         .then(data => {
-            console.log(data)
+            // console.log(data)
             const parent_div = document.querySelector('#new-released-movies-container');
             if (data.length === 0) {
                 const section = document.getElementById('new-released-movies-section')
