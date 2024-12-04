@@ -94,7 +94,7 @@
                 <main>
                     <div class="my-10">
                         <div class="my-10">
-                            <div class="block" id="user-list-card">
+                            <div class="block" id="cine-request-list-card">
                                 <div class="mb-2">
                                     <div
                                         role="alert"
@@ -143,6 +143,34 @@
                                         >
                                     </div>
                                 </div>
+                                <div>
+                                    <dialog
+                                        id="cine-request-modal"
+                                        class="modal"
+                                    >
+                                        <div class="modal-box">
+                                            <h3
+                                                id="modal-title"
+                                                class="text-lg font-bold"
+                                            >
+                                                Cine Request Details
+                                            </h3>
+                                            <div
+                                                id="modal-content"
+                                                class="py-4"
+                                            >
+                                                <!-- Content will be dynamically added -->
+                                            </div>
+                                            <div class="modal-action">
+                                                <form method="dialog">
+                                                    <button class="btn">
+                                                        Close
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </dialog>
+                                </div>
                                 <div class="overflow-x-auto">
                                     <table
                                         class="table table-lg table-zebra text-center"
@@ -185,7 +213,10 @@
                                                 </td>
                                             </tr>
                                             <!-- row 2 -->
-                                            <tr class="" id="demo-request-card">
+                                            <tr
+                                                class="hidden"
+                                                id="demo-request-card"
+                                            >
                                                 <td>John Doe</td>
                                                 <td>john@doe.com</td>
                                                 <td>
