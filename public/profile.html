@@ -151,6 +151,19 @@
     <section>
         <div>
             <div class="" id="profile-details-container">
+            <!-- loading animation start -->
+            <div
+                id="loading-screen"
+                class="fixed inset-0 flex flex-col items-center justify-center bg-[#141414] text-white z-50"
+            >
+                <div class="cinecraze-loader flex">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <p class="mt-5 text-lg">Loading...</p>
+            </div>
+            <!-- loading animation end -->
                 <div class="w-80 lg:w-[1280px] mx-auto my-20 lg:my-25 flex flex-col items-start lg:flex-row gap-y-5 lg:gap-x-5"
                     id="demo-details">
                     <ul

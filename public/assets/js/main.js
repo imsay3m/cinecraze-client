@@ -176,3 +176,14 @@ const handleLogout = () => {
 const refreshPage = () => {
     location.reload();
 }
+
+// 12.LOADING ANIMATION
+document.addEventListener("DOMContentLoaded", () => {
+    const loader = document.getElementById("loading-screen");
+    const content = document.querySelector(".content");
+
+    setTimeout(() => {
+        loader.classList.add("hidden");
+        content.classList.remove("hidden");
+    }, 500); // Adjust delay as needed
+});
