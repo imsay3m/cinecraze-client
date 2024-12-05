@@ -1,8 +1,3 @@
-if (user_token) {
-    // User is authenticated, redirect to userDetails page
-    window.location.href = "profile.html";
-}
-
 const handleSignup = (event) => {
     event.preventDefault()
     const signup_api = 'https://cinecraze-server.onrender.com/user/register/';
